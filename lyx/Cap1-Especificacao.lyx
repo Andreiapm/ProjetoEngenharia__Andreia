@@ -153,114 +153,8 @@ especificação
 \begin_layout Standard
 Apresenta-se neste capítulo do projeto de engenharia a concepção, a especificaçã
 o do sistema a ser modelado e desenvolvido.
-\end_layout
-
-\begin_layout Section
-O que é a especificação?
-\begin_inset Index idx
+\begin_inset Note Note
 status collapsed
-
-\begin_layout Plain Layout
-Concepção
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Concepção"
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-especificação
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Especificação"
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Especificações
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Especificação e cenários"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-Nota: os textos que explicam o que é especificação; diagrama caso uso; etc....;
- foram colocados apenas para que você se lembre do assunto; na versão final
- do seu trabalho estes texto explicativos feitos pelo professor devem ser
- retirados/apagados.
-\end_layout
-
-\begin_layout Standard
-A primeira etapa do desenvolvimento de um sistema é a concepção, a definição
- de requisitos a serem satisfeitos e a especificação do sistema (descrição
- do objetivo e o que se espera do sistema a ser desenvolvido, o contexto
- da aplicação).
-\end_layout
-
-\begin_layout Standard
-Na concepção ocorre a primeira reunião da equipe de desenvolvimento com
- os clientes, quando é feita a especificação do software.
- O cliente por meio das especificações e das entrevistas, passa para o analista
- idéias gerais de uso do sistema.
- Neste caso, o cliente é o professor da disciplina e os alunos os analistas/dese
-nvolvedores.
-\end_layout
-
-\begin_layout Standard
-O resultado da etapa de especificação é um conjunto formal de documentos
- e requisitos organizados pelo analista do sistema com apoio dos usuários.
- 
-\end_layout
-
-\begin_layout Standard
-As 
-\shape italic
-especificações
-\shape default
- definem as características gerais do sistema, aquilo que ele deve realizar
- e não a forma como irá fazê-lo.
- Definem as necessidades a serem satisfeitas.
- Envolvem a seleção do tipo de interface, a forma de interação com o usuário;
- se vai ter uma ou múltiplas janelas; se o software vai imprimir seus resultados
-, o formato dos arquivos de disco; se vai existir um help e seu formato.
- Podem ser especificadas características de desempenho.
- O cliente define o que deve obrigatoriamente ser satisfeito e o que é opcional
- – isto é, tudo o que o sistema/software deve ser.
- 
-\end_layout
-
-\begin_layout Description
-Dica: a comunicação com o cliente pode ser melhorada com o uso de metáforas,
- como, por exemplo, a metáfora da "lixeira".
- 
-\end_layout
 
 \begin_layout Description
 NOTA
@@ -275,33 +169,40 @@ IMPORTANTE:
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 Como requisitos mínimos o software deve:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Solicitar dados ao usuário via terminal (teclado/tela);
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Mostrar resultados na tela;
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ler dados de entrada e gerar dados de saída em arquivos de disco;
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Plotar gráficos usando biblioteca externa CGnuplot (tem livro do gnuplot
  na biblioteca );
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Nome do sistema/produto 
+Nome do sistema/produto
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle" tabularwidth="14cm">
@@ -314,6 +215,7 @@ Nome do sistema/produto
 \begin_layout Plain Layout
 
 \series bold
+\color red
 Nome
 \end_layout
 
@@ -324,6 +226,8 @@ Nome
 
 \begin_layout Plain Layout
 
+\color red
+Simulador de teste build-up
 \end_layout
 
 \end_inset
@@ -336,6 +240,7 @@ Nome
 \begin_layout Plain Layout
 
 \series bold
+\color red
 Componentes principais
 \end_layout
 
@@ -346,6 +251,8 @@ Componentes principais
 
 \begin_layout Plain Layout
 
+\color red
+Sistema para cálculo de parâmetros de reservatório
 \end_layout
 
 \end_inset
@@ -358,6 +265,7 @@ Componentes principais
 \begin_layout Plain Layout
 
 \series bold
+\color red
 Missão
 \end_layout
 
@@ -368,6 +276,8 @@ Missão
 
 \begin_layout Plain Layout
 
+\color red
+Ferramenta de ensino na área de avaliação de formações
 \end_layout
 
 \end_inset
@@ -395,17 +305,57 @@ especificação
 \end_layout
 
 \begin_layout Standard
-Apresenta-se a seguir a especificação do software.
+O software descrito nesse projeto tem como função simular os cálculos relacionad
+os a parâmetros de reservatório, por meio de dados referentes a um teste
+ de crescimento de pressão em um poço produtor, importados de um arquivo
+ texto.
+ O programa realizará uma regressão linear semi-logarítmica entre a pressão
+ medida no fundo do poço versus o tempo, gerando gráficos com auxílio do
+ software externo 
+\shape italic
+gnuplot
+\shape default
+.
+ O usuário fornecerá através do arquivo .dat, valores iniciais sobre o sistema
+ poço-reservatório: de porosidade, espessura do reservatório, viscosidade,
+ compressibilidade total e fator volume de formação do fluido.
+ Além disso, ele escolherá qual método será utilizado para a geração dos
+ resultados.
+ Através da visualização e interpretação dos gráficos gerados, o programa
+ terá como saída os valores de permeabilidade efetiva, pressão inicial,
+ raio externo do reservatorio, índice de produtividade, fator película de
+ formação e efeito de estocagem (caso estes ocorram), além dos gráficos
+ da variação da pressão no poço versus tempo.
 \end_layout
 
 \begin_layout Standard
-....coloque aqui a especificação...
+O desenvolvimento do programa será feito utilizando a linguagem de programação
+ C++, por se tratar de uma linguagem eficiente e possibilitar o reaproveitamento
+ de códigos já desenvolvidos.
+ Por se tratar de um programa científico, será utilizada uma interface em
+ modo texto, que permitirá a entrada e saída de dados de forma simplificada.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A especificação sofreu uma reformulação na escrita.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-...eventualmente coloque imagem ilustrativa geral, mostrando o que se pretente
- (primeira ideia) do software; normalmente esta figura já será mais detalhada
- que aquela apresentada no escopo...
+\align block
+Licença: o presente software tem licença GPL 2.0, conforme consta no site
+ http://
+\end_layout
+
+\begin_layout Standard
+\align block
+softwarelivre.org.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -413,12 +363,14 @@ Requisitos funcionais
 \end_layout
 
 \begin_layout Standard
+
+\color red
 Apresenta-se a seguir os requisitos funcionais
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-coloque aqueles que fazem sentido para seu sistema
+NOVO- VERSÃO 2
 \end_layout
 
 \end_inset
@@ -427,6 +379,8 @@ coloque aqueles que fazem sentido para seu sistema
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features tabularvalignment="middle" tabularwidth="14cm">
@@ -439,6 +393,7 @@ coloque aqueles que fazem sentido para seu sistema
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RF-01
 \end_layout
 
@@ -448,8 +403,10 @@ RF-01
 \begin_inset Text
 
 \begin_layout Plain Layout
-O sistema deve conter uma base de dados xxx.
- O usuário deve ser capaz de xxx.
+
+\color red
+O sistema deverá conter uma base de dados referentes a um teste de crescimento
+ de pressão.
 \end_layout
 
 \end_inset
@@ -463,6 +420,8 @@ O sistema deve conter uma base de dados xxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -479,6 +438,7 @@ O sistema deve conter uma base de dados xxx.
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RF-02
 \end_layout
 
@@ -488,7 +448,10 @@ RF-02
 \begin_inset Text
 
 \begin_layout Plain Layout
-O usuário deverá ter liberdade para xxxx.
+
+\color red
+O usuário deverá informar o nome do arquivo texto de onde serão lidas as
+ informações do teste de pressão
 \end_layout
 
 \end_inset
@@ -502,6 +465,8 @@ O usuário deverá ter liberdade para xxxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -518,6 +483,7 @@ O usuário deverá ter liberdade para xxxx.
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RF-03
 \end_layout
 
@@ -527,7 +493,10 @@ RF-03
 \begin_inset Text
 
 \begin_layout Plain Layout
-Deve permitir o carregamento de arquivos criados pelo software.
+
+\color red
+O usuário deverá entrar com os parâmetros do fluido, do reservatório e do
+ poço.
 \end_layout
 
 \end_inset
@@ -541,6 +510,8 @@ Deve permitir o carregamento de arquivos criados pelo software.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -548,6 +519,8 @@ Deve permitir o carregamento de arquivos criados pelo software.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features tabularvalignment="middle" tabularwidth="14cm">
@@ -560,6 +533,7 @@ Deve permitir o carregamento de arquivos criados pelo software.
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RF-04
 \end_layout
 
@@ -569,7 +543,10 @@ RF-04
 \begin_inset Text
 
 \begin_layout Plain Layout
-Deve permitir a escolha da equação xxx.
+
+\color red
+O usuário deverá entrar com os parâmetros do fluido, do reservatório e do
+ poço.
 \end_layout
 
 \end_inset
@@ -583,6 +560,8 @@ Deve permitir a escolha da equação xxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -590,6 +569,8 @@ Deve permitir a escolha da equação xxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features tabularvalignment="middle" tabularwidth="14cm">
@@ -602,6 +583,7 @@ Deve permitir a escolha da equação xxx.
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RF-05
 \end_layout
 
@@ -611,7 +593,9 @@ RF-05
 \begin_inset Text
 
 \begin_layout Plain Layout
-O usuário deve ter tal liberdade para escolher xxx.
+
+\color red
+O usuário deverá ter liberdade para escolher o método de Horner ou MDH.
 \end_layout
 
 \end_inset
@@ -625,6 +609,8 @@ O usuário deve ter tal liberdade para escolher xxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -641,6 +627,7 @@ O usuário deve ter tal liberdade para escolher xxx.
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RF-06
 \end_layout
 
@@ -650,7 +637,9 @@ RF-06
 \begin_inset Text
 
 \begin_layout Plain Layout
-O usuário poderá plotar seus resultados em um gráfico.
+
+\color red
+O usuário poderá plotar um gráfico semi-logarítmico.
  O gráfico poderá ser salvo como imagem ou ter seus dados exportados como
  texto.
 \end_layout
@@ -666,6 +655,8 @@ O usuário poderá plotar seus resultados em um gráfico.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -674,9 +665,21 @@ O usuário poderá plotar seus resultados em um gráfico.
 
 \begin_layout Subsection
 Requisitos não funcionais
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+NOVO-VERSÃO 2
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features tabularvalignment="middle" tabularwidth="14cm">
@@ -689,6 +692,7 @@ Requisitos não funcionais
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RNF-01
 \end_layout
 
@@ -698,7 +702,10 @@ RNF-01
 \begin_inset Text
 
 \begin_layout Plain Layout
-Os cálculos devem ser feitos utilizando-se xxxx.
+
+\color red
+Os cálculos devem ser feitos utilizando-se fórmulas provenientes da disciplina
+ de Avaliação de Formações.
 \end_layout
 
 \end_inset
@@ -712,6 +719,8 @@ Os cálculos devem ser feitos utilizando-se xxxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -719,6 +728,8 @@ Os cálculos devem ser feitos utilizando-se xxxx.
 \end_layout
 
 \begin_layout Standard
+
+\color red
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="2">
 <features tabularvalignment="middle" tabularwidth="14cm">
@@ -731,6 +742,7 @@ Os cálculos devem ser feitos utilizando-se xxxx.
 \begin_layout Plain Layout
 
 \series bold
+\color red
 RNF-02
 \end_layout
 
@@ -740,6 +752,8 @@ RNF-02
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color red
 O programa deverá ser multi-plataforma, podendo ser executado em 
 \emph on
 Windows
@@ -766,7 +780,7 @@ Mac
 \end_layout
 
 \begin_layout Section
-O que são os casos de uso
+Casos de uso
 \begin_inset Index idx
 status collapsed
 
@@ -776,108 +790,34 @@ Casos de uso
 
 \end_inset
 
- do sistema – cenários
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Casos-de-uso-do-programa"
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
+ 
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
-Cenário
+do software
 \end_layout
 
 \end_inset
 
-?
+
 \end_layout
 
 \begin_layout Standard
-Segundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-UML-blaha"
-literal "true"
-
-\end_inset
-
-, "um 
-\shape italic
-cenário
-\shape default
- pode ser um registro histórico de execução de um sistema real ou um experimento
- de execução teórica de um sistema proposto"
-\emph on
-.
-\end_layout
-
-\begin_layout Standard
-Um 
-\shape italic
-caso de uso
-\shape default
- descreve um ou mais cenários de uso do software, exemplos de uso, como
- o sistema interage com usuários externos (atores).
- Ademais, ele deve representar uma seqüência típica de uso do software (a
+Um caso de uso descreve um ou mais cenários de uso do software, exemplos
+ de uso, como o sistema interage com usuários externos (atores).
+ Ademais, ele deve representar uma seqüência típica de uso do programa (a
  execução de determinadas tarefas-padrão).
  Também deve representar as exceções, casos em que o usuário comete algum
  erro, em que o sistema não consegue realizar as tarefas solicitadas.
- 
-\end_layout
-
-\begin_layout Standard
-Segundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-literal "true"
-
-\end_inset
-
-, o caso de uso deve "produzir uma descrição clara e não ambígua de como
- o usuário final e o sistema interagem um com o outro".
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-literal "true"
-
-\end_inset
-
- diz ainda que "uma vez definidos o ator e seu caso de uso, uma hierarquia
- de comandos é identificada"
-\emph on
-.
-\end_layout
-
-\begin_layout Standard
-Devem ser montados diversos diagramas de caso de uso.
- Por exemplo: para cada cenário, crie diagramas de seqüência listando os
- objetos e os diversos eventos que partem de um objeto para outro.
-\end_layout
-
-\begin_layout Standard
-A Tabela 
+ A Tabela 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cap:Exemplo-de-um-caso-de-uso (tabela)"
 
 \end_inset
 
- mostra os itens a serem incluídos na descrição do caso de uso, podendo-se
- ainda incluira lista de atores e as pré-condições para execução.
- O item etapas é opcional, pois elas podem ser incluídas diretamente no
- diagrama de caso de uso.
-\end_layout
-
-\begin_layout Standard
-Uma vez apresentados os conceitos relacionados aos casos de uso, cenários,
- apresentaremos como modelar os cenários com os diagramas de caso de uso
- da UML.
+ mostra os itens a serem incluídos na descrição do caso de uso.
 \end_layout
 
 \begin_layout Standard
@@ -934,7 +874,7 @@ Nome do caso de uso:
 \begin_inset Text
 
 \begin_layout Plain Layout
-Cálculo da integral de uma função.
+Cálculo de parâmetros do reservatório
 \end_layout
 
 \end_inset
@@ -954,7 +894,8 @@ Resumo/descrição:
 \begin_inset Text
 
 \begin_layout Plain Layout
-Determinação da integral de uma função em um dado intervalo.
+Determinação de parâmetros do reservatório através de uma regressão linear
+ semi-logarítmica com dados de teste de crescimento de pressão
 \end_layout
 
 \end_inset
@@ -965,7 +906,7 @@ Determinação da integral de uma função em um dado intervalo.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Etapas: 
+Etapas:
 \end_layout
 
 \end_inset
@@ -974,33 +915,46 @@ Etapas:
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.
- Criar objeto função.
+1.Importar dados do teste de pressão de arquivo texto.
 \end_layout
 
 \begin_layout Plain Layout
 2.
- Criar objeto de integração.
+ Fornecer dados do sistema poço-reservatório.
 \end_layout
 
 \begin_layout Plain Layout
+
+\color red
 3.
- Definir intervalo de integração e número de pontos.
+ Selecionar o método de Horner ou método de MDH.
 \end_layout
 
 \begin_layout Plain Layout
 4.
- Calcular área da função.
-\end_layout
-
-\begin_layout Plain Layout
-5.
  Gerar gráficos.
 \end_layout
 
 \begin_layout Plain Layout
+5.
+ Exibir resultados na tela exportar para um arquivo .dat.
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
 6.
- Analisar resultados.
+ Comparar os resultados dos dois métodos.
+\end_layout
+
+\begin_layout Plain Layout
+7.
+ Selecionar uma variável e definir um intervalo de variação para a mesma.
+\end_layout
+
+\begin_layout Plain Layout
+8.
+ Gerar novos resultados e analisar a interferência da variação nestes.
 \end_layout
 
 \end_inset
@@ -1021,8 +975,14 @@ Cenários alternativos:
 
 \begin_layout Plain Layout
 Um cenário alternativo envolve uma entrada errada do usuário (por exemplo,
- a função é logarítmica, e o intervalo vai de -1 a 10).
- O software apresentará um bug quando for determinar o logarítmo de -1.
+ valores de entrada dos dados do fluido como viscosidade, valores de pressão
+ negativos, fator volume de formação menor que a unidade).
+ O programa apresentará um bug quando valores que deveriam ser positivios
+ forem menores que zero.
+ Outro exemplo ocorre na entrada de dados para criação da função semi-logarítmic
+a.
+ O programa apresentará um bug quando for determinar o logarítmo de -1.
+ O software apresentará uma mensagem de erro.
 \end_layout
 
 \end_inset
@@ -1042,86 +1002,12 @@ Um cenário alternativo envolve uma entrada errada do usuário (por exemplo,
 status open
 
 \begin_layout Plain Layout
-As Figuras devem ficar GRANDES; bem legíveis!! se necessário dar zoom!!
+REESCRITO E ALGUMAS COISAS ADICIONADAS!
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Casos de uso
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Casos de uso
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-do software
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-....tabela descritiva aqui...
-\end_layout
-
-\begin_layout Subsection
-O que são os diagramas de casos de uso
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-casos de uso
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Diagrama de caso de uso
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Diagrama-de-casos-de-uso"
-
-\end_inset
-
-?
-\end_layout
-
-\begin_layout Standard
-O diagrama de casos de uso é uma representação visual dos casos de uso.
- É o diagrama mais simples da UML, sendo utilizado para demonstrar os cenários
- de uso do sistema pelos usuários, os quais ao verem esses diagramas terão
- uma visão geral do sistema.
- 
-\end_layout
-
-\begin_layout Standard
-O diagrama de caso de uso pode ser utilizado durante e após a etapa de especific
-ação, adicionando às especificações textuais alguns cenários de uso do software
- a ser desenvolvido.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -1139,14 +1025,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-....coloque aqui caso de uso geral, descrição + figura(s)...
-\end_layout
 
-\begin_layout Standard
-exemplo...
-\end_layout
-
-\begin_layout Standard
+\color red
 O diagrama de caso de uso geral da Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1154,9 +1034,10 @@ reference "cap:Diagrama-caso-uso-geral"
 
 \end_inset
 
- mostra o usuário acessando os sistemas de ajuda do software, calculando
- a área de uma função ou analisando resultados.
- 
+ mostra o usuário inserindo os dados do teste de pressão, fornecendo os
+ dados do fluido e do reservatório, necessários para os cálculos dos parâmetros
+ do reservatório a serem determinados e analisando os resultados.
+ Demonstra a interação do usuário com o programa.
 \end_layout
 
 \begin_layout Standard
@@ -1168,7 +1049,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/DiagCasoDeUso-AnaliseDosResultados.png
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/imagens/DIAGRAMA_CASO_DE_USO_GERAL_ANDREIA_CORRIGIDO.PNG
 	width 100text%
 
 \end_inset
@@ -1215,43 +1096,23 @@ status open
 \end_layout
 
 \begin_layout Standard
-....coloque aqui casos de uso específicos, descrição + figura(s)...
-\end_layout
 
-\begin_layout Standard
-exemplo...O caso de uso Calcular área função descrito na Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cap:Diagrama-caso-uso-geral"
-
-\end_inset
-
- e na Tabela 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "cap:Exemplo-de-um-caso-de-uso (tabela)"
-
-\end_inset
-
- é detalhado na Figura 
+\color red
+O diagrama de caso de uso específico da Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
 
 \end_inset
 
-.
- O usuário criará um objeto função matemática, um objeto para sua integração;
- em seguida, definirá o intervalo de integração, calculará a área da função
- criada e,  por fim, analisará os resultados (eventualmente gerará gráficos
- com os resultados obtidos utilizando um sistema externo, como o software
- 
-\emph on
-gnuplot
-\emph default
-).
- Este diagrama de caso de uso ilustra as etapas a serem executadas pelo
- usuário ou sistema, a iteração do usuário com o sistema.
+ mostra o usuário inserindo os dados.
+ O simulador realiza a regressão semi-logarítmica e calcula os parâmetros
+ do reservatório.
+ O usuário escolhe qual método quer utilizar para calcular os parâmetros.
+ Caso escolha primeiro o método de MDH e depois também queira calcular pelo
+ método de Horner, será possível comprar os resultados obtidos por meio
+ deles.
+ E por fim ocorre a análise dos resultados.
 \end_layout
 
 \begin_layout Standard
@@ -1263,8 +1124,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/DiagCasoDeUso-AnaliseDosResultados.png
-	width 100text%
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/imagens/DIAGRAMA_CASO_DE_USO_ESPECIFICO_ANDREIA_CORRIGIDO.PNG
+	width 93text%
 
 \end_inset
 
@@ -1275,7 +1136,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama de caso de uso específico – Título
+Diagrama de caso de uso específico -Escolhendo os dois métodos e comparando
+ os resultados
 \begin_inset CommandInset label
 LatexCommand label
 name "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
@@ -1296,6 +1158,10 @@ name "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
 \end_layout
 
 \begin_layout Description
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Nota: 
 \begin_inset space ~
 \end_inset
@@ -1309,6 +1175,11 @@ Não perca de vista a visão do todo; do projeto de engenharia como um todo.
  Este é um diferencial fundamental do engenheiro em relação ao técnico,
  a capacidade de desenvolver projetos, de ver o todo e suas diferentes partes,
  de modelar processos/sistemas/produtos de engenharia.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

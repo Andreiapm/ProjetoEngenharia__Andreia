@@ -873,7 +873,8 @@ DESENVOLVIMENTO DO SOFTWARE
 \begin_inset Newline newline
 \end_inset
 
-XXX
+PROGRAMA EM C++ PARA AVALIAÇÃO DE FORMAÇÕES POR DADOS DE TESTES DE PRESSÃO
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -895,7 +896,11 @@ Versão 1:
 \begin_inset Newline newline
 \end_inset
 
-AUTORES
+LEONAM DOS SANTOS BRAGA
+\begin_inset Newline newline
+\end_inset
+
+RENAN MARCOS DE LIMA FILHO
 \begin_inset Newline newline
 \end_inset
 
@@ -903,7 +908,7 @@ Versão 2:
 \begin_inset Newline newline
 \end_inset
 
-AUTORES
+ANDRÉIA DE PAULA MARTUSCELLI
 \begin_inset Newline newline
 \end_inset
 
@@ -936,7 +941,7 @@ MACAÉ - RJ
 \begin_inset Newline newline
 \end_inset
 
-Janeiro - 2015
+SETEMBRO - 2021
 \end_layout
 
 \begin_layout Standard
@@ -996,7 +1001,7 @@ status open
 
 
 \backslash
-lfoot{SeuNomeAqui} 
+lfoot{Andréia de Paula} 
 \backslash
 rfoot{
 \backslash
@@ -1031,14 +1036,22 @@ today ele vai colocar data no material impresso
 \end_layout
 
 \begin_layout Standard
-No presente projeto de engenharia desenvolve-se o software XXXX, um software
- aplicado a engenharia de petróleo e que utiliza o paradigma da orientação
- a objetos.
-\end_layout
-
-\begin_layout Itemize
-O primeiro parágrafo da introdução pode ser um super resumo do trabalho.
- A ideia é fazer um resumo do resumo.
+Neste projeto de engenharia será desenvolvido um software que possibilita
+ ao usuário calcular de forma eficaz e simplificada os parâmetros de um
+ reservatório.
+ Tal método consiste na análise do comportamento da pressão do reservatório
+ ao longo do tempo sob efeito de diferentes vazões de produção.
+ Todas essas informações são importantes para a construção de um modelo
+ confiável e o mais próximo do real visando avaliar o potencial de um reservatór
+io.
+ 
+\color red
+Este projeto, frente a outros já desenvolvidos, possui dois diferenciais:
+ a realização dos cálculos dos parâmetros de reservatório por meio dos métodos
+ de Horner e método MDH e a comparação de seus resultados; e a possibilidade
+ de variação de um determinado parâmetro, e a visualização de como tal variação
+ influenciará no comportamento do reservatório.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1053,36 +1066,27 @@ name "sec:Escopo-do-Problema"
 \end_layout
 
 \begin_layout Standard
-Segundo o CREA/CONFEA um dos quesitos fundamentais que diferenciam a atuação
- de um tecnólogo da atuação de um engenheiro é a capacidade de desenvolver
- um projeto em engenharia; Neste trabalho, desenvolve-se um projeto em engenhari
-a de software aplicado a solução de um problema específico de engenharia
- de petróleo.
- Trabalhando-se com todo ciclo de um projeto, isto é, especificação, elaboração,
- análise, projeto, desenvolvimento, teste e documentação.
- 
+O estudo do comportamento das pressões nas formações produtoras de petróleo
+ é de fundamental importância para a engenharia de reservatórios.
+ Por meio de análises destes testes, é possível determinar potencialidades
+ e características dos reservatórios, avaliar as reservas disponíveis de
+ hidrocarbonetos, bem como fornecer previsões de produção dos fluidos existentes.
 \end_layout
 
-\begin_layout Itemize
-ESTE MODELO TEM TEXTOS EXPLICATVOS QUE DEVEM SER ELIMINADOS DA VERSÃO FINAL.
- O OBJETIVO DE COLOCAR AS EXPLICAÇÕES É FACILITAR O ENTENDIMENTO DO QUE
- DEVE ENTRAR EM CADA SEÇÃO.
+\begin_layout Standard
+O domínio dos conceitos básicos da teoria de fluxo de fluidos através de
+ meios porosos é necessário para aplicação e desenvolvimento das técnicas
+ atuais de análise de dados de pressão em poços, particularmente no que
+ se refere à avaliação das potencialidades e determinação das características
+ dos horizontes produtores.
 \end_layout
 
-\begin_layout Itemize
-Definir o escopo do projeto de engenharia, a ideia geral do software, acentuar
- sua importância, usos e aplicações em engenharia [de petróleo].
-\end_layout
-
-\begin_layout Itemize
-Delimitar o assunto.
- Situá-lo no tempo e no espaço.
- Situá-lo em relação a outros softwares.
-\end_layout
-
-\begin_layout Itemize
-Neste capítulo podem entrar figuras que ilustram a ideia geral, o detalhamento
- será feito depois, na elaboração.
+\begin_layout Standard
+Por ocasião da descoberta de novos campos petrolíferos, as decisões sobre
+ os recursos a serem investidos, dependem, por exemplo, de avaliações realizadas
+ por intermédio de testes em poços.
+ Estes testes duram pouco tempo e geram restultados confiáveis para avaliar
+ a exploração de tais jazidas.
 \end_layout
 
 \begin_layout Section
@@ -1097,7 +1101,7 @@ name "sec:Objetivos"
 \end_layout
 
 \begin_layout Standard
-Os objetivos deste projeto de engenharia são:
+Os objetivos deste trabalho são:
 \end_layout
 
 \begin_layout Itemize
@@ -1110,19 +1114,24 @@ Objetivo geral:
 
 \begin_deeper
 \begin_layout Itemize
-Descreva aqui o objetivo geral do projeto de engenharia, incluindo vínculos
- com engenharia de petróleo e com modelagem matemática computacional (ideia
- de lógica, algoritmos,...).
-\end_layout
-
-\begin_layout Itemize
-Desenvolver um projeto de engenharia de software para ...[.....descrever de forma
- clara, direta, objetiva, o objetivo geral do software].
+Criar um software capaz de fornecer ao usuário , através da análise dos
+ dados obtidos em testes de pressão em poços, possibilitando estimar as
+ dimensões do campo e sua potencialidade econômica.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 Objetivos específicos:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Houve uma reformulação em alguns dos objetivos que não estão em vermelho.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Separator latexpar
 \end_inset
 
@@ -1131,35 +1140,60 @@ Objetivos específicos:
 
 \begin_deeper
 \begin_layout Itemize
-Modelar física e matematicamente o problema.
+Calcular a permeabilidade efetiva do meio poroso;
 \end_layout
 
 \begin_layout Itemize
-Modelagem estática do software (diagramas de caso de uso, de pacotes, de
- classes).
+Calcular o fator de película do poço;
 \end_layout
 
 \begin_layout Itemize
-Modelagem dinâmica do software (desenvolver algoritmos e diagramas exemplificand
-o os fluxos de processamento).
+Calcular índice de produtividade;
 \end_layout
 
 \begin_layout Itemize
-Calcular XXX[.....descrever de forma clara, direta, objetiva, cada objetivo específic
-o, cada parte do software].
+Calcular a pressão inicial e média na região drenada pelo poço;
 \end_layout
 
 \begin_layout Itemize
-Calcular XXX[.....descrever de forma clara, direta, objetiva, cada objetivo específic
-o, cada parte do software].
+Estimar efeito de estocagem e sua duração;
 \end_layout
 
 \begin_layout Itemize
-Simular (realizar simulações para teste do software desenvolvido).
+Apresentar de forma gráfica o comportamento da pressão ao longo do tempo;
 \end_layout
 
 \begin_layout Itemize
-Implementar manual simplificado de uso do software.
+Criar um banco de dados que possibilite ao usuário comparar o reservatório
+ que está sendo analisado com outros anteriormente analisados pelo programa;
+\end_layout
+
+\begin_layout Itemize
+Salvar os resultados em modo texto no disco;
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Utilizar o método de Horner e o método de MDH, de acordo com a escolha do
+ usuário;
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Realizar comparação dos resultados dos parâmetros de acordo com o método
+ realizado.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper

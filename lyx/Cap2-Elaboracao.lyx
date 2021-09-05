@@ -148,130 +148,157 @@ name "sec:Elaboração"
 \end_layout
 
 \begin_layout Standard
-Depois da definição dos objetivos, da especificação do software e da montagem
- dos primeiros diagramas de caso de uso, a equipe de desenvolvimento do
- projeto de engenharia passa por um processo de elaboração que envolve o
- estudo de conceitos relacionados ao sistema a ser desenvolvido, a análise
- de domínio e a identificação de pacotes.
+Na elaboração serão apresentados o estudo de conceitos relacionados ao sistema
+ a ser desenvolvido, a análise de domínio e a identificação de pacotes.
  
-\end_layout
-
-\begin_layout Standard
-Na elaboração fazemos uma análise dos requisitos, ajustando os requisitos
- iniciais de forma a desenvolver um sistema útil, que atenda às necessidades
- do usuário e, na medida do possível, permita seu reuso e futura extensão.
-\end_layout
-
-\begin_layout Standard
-Eliminam-se os requisitos "impossíveis" e ajusta-se a idéia do sistema de
- forma que este seja flexível, considerando-se aspectos como custos e prazos.
 \end_layout
 
 \begin_layout Section
-O que é a análise de domínio
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
 Análise de domínio
 \end_layout
 
-\end_inset
+\begin_layout Itemize
 
-
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Análise-de-domínio"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Esta parte deve ser apagada na versão final; serve apenas como lembrete
- dos itens que vocês precisam considerar
+\color red
+O 
+\shape italic
+software
+\shape default
+, com o auxílio do corpo docente, será desenvolvido na Universidade Estadual
+ do Norte Fluminense Darcy Ribeiro.
 \end_layout
 
-\end_inset
+\begin_layout Itemize
 
+\color red
+O 
+\shape italic
+software
+\shape default
+ envolve conceitos abordados nas disciplinas de Engenharia de Reservatórios,
+ Avaliação de Formações, Cálculo Numérico e Programação Orientada a Objeto
+ em C++.
+\end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\color red
+A Engenharia de Reservatórios estuda o escoamento dos fluidos e permite
+ descrever seu comportamento no interior dos meios porosos que compõem os
+ reservatórios de petróleo.
+ Com isso planeja o desenvolvimento de um campo de petróleo, prevê seu desempenh
+o durante a vida produtiva e analisa seu comportamento propondo correções
+ para otimizar seu desempenho, com o objetivo de maximizar a produção de
+ hidrocarbonetos com o menor custo possível.
 \end_layout
 
 \begin_layout Standard
-A análise de domínio é uma parte da elaboração; seu objetivo é entender
- o domínio, a abrangência do sistema a ser desenvolvido.
- Envolve itens como estimar o reuso do sistema.
- Neste ponto, o analista pensa no sistema de uma forma mais genérica, identifica
-ndo conceitos fundamentais que podem ser reaproveitados em outros sistemas.
- 
+
+\color red
+Avaliação de Formações são as atividades e estudos que visam definir em
+ termos qualitativos e quantitativos a capacidade produtiva e a valorização
+ das reservas de óleo e gás de uma jazida petrolífera.
+ O monitoramento das vazões e pressões de fundo do poço, durante um teste,
+ e o conhecimento das propriedades dos fluidos, permite que informações
+ a respeito das características da rocha-reservatório e parâmetros de drenagem
+ sejam obtidos.
 \end_layout
 
-\begin_layout Itemize
-Estudo dos requisitos/especificações do sistema.
+\begin_layout Standard
+
+\color red
+Os métodos matemáticos utilizados, regressão semi-logarítmica, ajuste de
+ curvas pelo método dos mínimos quadrados, são provenientes da disciplina
+ de cálculo numérico.
+ Esta tem como objetivo estudar e criar algoritmos numéricos para resolução
+ de problemas que podem ser representados por um Modelo Matemático.
+ O objetivo do cálculo numérico é encontrar uma solução aproximada para
+ o problema, mantendo sobre controle os erros associados com essa aproximação.
 \end_layout
 
-\begin_layout Itemize
-Definição e caracterização do domínio a ser investigado (área dos softwares
- e bibliotecas a serem investigadas).
- Uma boa maneira de identificar os assuntos relacionados ao sistema que
- está sendo desenvolvido é dar uma olhada nos livros, manuais e artigos
- da área.
+\end_deeper
+\begin_layout Section
+Formulação Teórica
 \end_layout
 
-\begin_layout Itemize
-Manter contato com especialistas que tenham domínio dos conceitos envolvidos.
- Segundo 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-UML-MartimFowler"
-literal "true"
+\begin_layout Standard
 
-\end_inset
-
-, estas pessoas "devem ser abertas, ter bastante conhecimento prático e
- estar disponíveis para perguntas".
-\end_layout
-
-\begin_layout Itemize
-Deve-se fazer entrevistas com os usuários do sistema (para detalhamento
- dos diagramas de caso de uso).
-\end_layout
-
-\begin_layout Itemize
-Identificação de amostras (instalar e testar softwares e bibliotecas similares).
-\end_layout
-
-\begin_layout Itemize
-Na elaboração deve-se analisar a possibilidade de se reaproveitar projetos
- antigos (sistemas existentes etc).
- Procurar as classes em bibliotecas existentes antes de implementá-las 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-literal "true"
-
-\end_inset
-
+\color red
+Para determinar os parâmetros de reservatórios é necessário compreender
+ alguns conceitos e formulações matemáticas relacionados às disciplinas
+ citadas.
+ Estes serão explicados abaixo, com a finalidade de elucidar as idéias em
+ que serão desenvolvidas para o funcionamento do 
+\shape italic
+software
+\shape default
 .
- Se a equipe de desenvolvimento já tem experiência com alguns sistemas,
- isto deve ser considerado.
- A idéia é reaproveitar o conhecimento legado.
+\end_layout
+
+\begin_layout Subsection
+Teste de Pressão
+\end_layout
+
+\begin_layout Standard
+Um dos métodos mais utilizados na Engenharia de Reservatórios são os testes
+ de pressão.
+ Estes consistem em acompanhar os dados de pressão no poço em função da
+ vazão de produção utilizada.
+ Através desse acompanhamento pode se determinar parâmetros de drenagem
+ e outros fatores que interferem na produção do campo de petróleo.
+\end_layout
+
+\begin_layout Standard
+A avaliação da formação consiste em um conjunto de atividades com vazão
+ controlada, que têm como objetivos:
 \end_layout
 
 \begin_layout Itemize
-Identificação e definição dos objetos genéricos (a serem reutilizados).
+obter o fluido contido na formação para análise do mesmo.
+\end_layout
+
+\begin_layout Itemize
+avaliar a capacidade produtiva da formação.
+\end_layout
+
+\begin_layout Itemize
+investigar a existência de danos de formação e efeito de estocagem.
+\end_layout
+
+\begin_layout Itemize
+determinar a extensão do reservatório e sua pressão inicial.
 \end_layout
 
 \begin_layout Standard
-Talvez o aspecto mais importante da elaboração seja o contato com o cliente.
- Quando o cliente/usuário tem uma noção básica de como o sistema é desenvolvido,
- ele passa a fazer solicitações que serão mais facilmente implementadas.
- 
+Os testes de pressão seguem as seguintes etapas:
+\end_layout
+
+\begin_layout Itemize
+completar o poço temporariamente para permitir a produção do fluido de forma
+ segura.
+\end_layout
+
+\begin_layout Itemize
+isolar o intervalo a ser testado.
+\end_layout
+
+\begin_layout Itemize
+criar um diferencial de pressão entre poço e reservatorio, afim de produzir
+ o fluido.
+\end_layout
+
+\begin_layout Itemize
+promover períodos intercalados de produção e fechamento do poço.
+\end_layout
+
+\begin_layout Itemize
+registro contínuo de vazões em superfície e pressões no poço.
 \end_layout
 
 \begin_layout Standard
+
+\lang english
 \begin_inset Float figure
 wide false
 sideways false
@@ -279,36 +306,261 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang english
 \begin_inset Graphics
-	filename ../imagens/AnaliseDeDominio.png
-	width 100text%
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia-Leonam-Renan-AvaliacaoDeFormacoesPorDadosTestesPressao-v2/imagens/Figura3.1.png
+	scale 80
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de teste de poço convencional, onde é possivel observar o comportamento
+ da pressão em função da variação da vazão de produção.
+ As regiões 1 e 3 mostram etapas com o poço fechado (q=0), onde é possível
+ ver um aumento da pressão no reservatorio.
+ Já na região 2, o poço está produzindo com uma vazão constante, causando
+ uma queda na pressão do reservatório.
+\end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Os teste de pressão mais comuns são: testes de fluxo (
+\shape italic
+drawdown
+\shape default
+), testes de crescimento de pressão (
+\shape italic
+buildup
+\shape default
+) e testes de injeção e 
+\shape italic
+falloff
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+O software desenvolvido tratará de um teste de crescimento de pressão, a
+ metodologia mais difundida para avaliação de formações.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+O teste de crescimento de pressão, baseia-se no resgistro contínuo das pressões
+ de fundo, após o fechamento de um poço que tenha estado produzindo por
+ um determinado período.
+ A Figura (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Esquema-buildup"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) ilustra o esquema do teste.
+ Os dados de pressão medidos durante o período de estática contém menos
+ ruído, que os medidos durante o período de fluxo, devido à vazão (
+\begin_inset Formula $q$
+\end_inset
+
+) igual a zero imposta ao poço.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\color red
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/Andreia de Paula - MDH/figuras/grafico build up fekete.PNG
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\color red
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esquema de vazão e comportamento da pressão em um polo submetido a um teste
+ de pressão 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Esquema-buildup"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Onde:
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula $p_{wf}$
+\end_inset
+
+= pressão no poço durante o período de fluxo.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula $p_{ws}$
+\end_inset
+
+= pressão durante o período de fechamento.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula $p_{wff}$
+\end_inset
+
+= última pressão de fluxo, ou seja, no instante em que o poço é fechado.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula $t_{p}$
+\end_inset
+
+= tempo de produção (ou de fluxo).
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula $\Delta t$
+\end_inset
+
+= período de tempo medido a partir do momento em que o poço é fechado.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+A base para toda análise e obtenção das equações que regem o comportamento
+ do reservatório é a Equação da Difusividade 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Difusividade"
+
+\end_inset
+
+, que para geometria radial e fluxo monofásico é dada por:
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{r}\frac{\text{∂}}{\text{∂}r}\left(\frac{k(r)}{\mu}r\frac{\text{∂}p}{\text{∂}r}\right)+\frac{k(r)}{\mu}Cf\left(\frac{\text{∂}p}{\text{∂}r}\right)^{2}=\phi Ct\frac{\text{∂}p}{\text{∂}t}\label{eq:Difusividade}
+\end{equation}
+
+\end_inset
+
+
+\lang brazilian
+ Dentre as inúmeras soluções existentes para determinados tipos de reservatórios
+ existentes e suas propriedades, os testes de pressão são fundamentados
+ na utilização da solução transiente dessa equação, com uma posição fixa
+ no fundo do poço (
+\begin_inset Formula $r=r_{w})$
+\end_inset
+
+, em um reservatório infinito e homogêneo.
+ A análise de testes de crescimento pode ser realizadas pelo método de ajustamen
+to com curvas-tipo e por métodos convencionais e podemos mencionar o método
+ de Horner, método de MDH, método de Agarwal, são utilizados outros derivados
+ para estimativa da pressão média na área de influência de um poço.
+\end_layout
+
+\begin_layout Standard
+Deve-se atentar ao sistema de unidades, para que os parâmetros sejam inseridos
+ com as unidades corretamentes e não haja problemas nos cálculos.
+ A Tabela (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:sistemaunidades"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) mostra as unidades correspondentes de acordo com os sistemas existentes
+ e que devem ser obedecidas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Elaboração e análise de domínio
+Variáveis no Sistema de Unidades 
 \begin_inset CommandInset label
 LatexCommand label
-name "cap:Análise-de-domínio."
-
-\end_inset
-
- (adaptado de 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prog-EngSof-Pressman"
-literal "true"
-
-\end_inset
-
-)
-\end_layout
+name "cap:sistemaunidades"
 
 \end_inset
 
@@ -319,104 +571,460 @@ literal "true"
 
 
 \end_layout
-
-\begin_layout Section
-Análise de domínio
-\end_layout
-
-\begin_layout Standard
-Após estudo dos requisitos/especificações do sistema, algumas entrevistas,
- estudos na biblioteca e disciplinas do curso foi possível identificar nosso
- domínio de trabalho:
-\end_layout
-
-\begin_layout Itemize
-Definição e caracterização do domínio a ser investigado 
-\end_layout
-
-\begin_layout Itemize
-Descrição das áreas/disciplinas relacionadas.
-\end_layout
-
-\begin_layout Itemize
-Descrição de questões associadas a espaço/tempo (espaço físico, local, instalaçã
-o).
-\end_layout
-
-\begin_layout Itemize
-Fotografias de sistemas equivalentes/parecidos.
-\end_layout
-
-\begin_layout Itemize
-...
-\end_layout
-
-\begin_layout Section
-Formulação teórica
-\end_layout
-
-\begin_layout Standard
-...coloque aqui texto explicando a formulação física-matemática, a descrição
- das equações que serão utilizadas...
-\end_layout
-
-\begin_layout Standard
-...aqui entram figuras, tabelas explicativas, equações a serem utilizadas no
- software...
-\end_layout
-
-\begin_layout Standard
-...logo depois, com os dados levantados na análise de domínio, e esta formulação
- teórica, iremos identificar os pacotes, os assuntos com os quais iremos
- trabalhar...
-\end_layout
-
-\begin_layout Standard
-...
- no final da formulação teórica, indicar livros e artigos que tem mais informaçã
-o sobre o assunto...
-\end_layout
-
-\begin_layout Standard
-...se vai usar modelos numéricos, colocar seção 3.3.x falando deles; no final
- citar/referenciar fontes...
-\end_layout
-
-\begin_layout Section
-O que é identificação de pacotes
-\begin_inset Index idx
-status collapsed
 
 \begin_layout Plain Layout
-Identificação de pacotes
+
 \end_layout
-
-\end_inset
-
- – assuntos
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Identificação-de-pacotes"
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
 
 \begin_layout Plain Layout
-Assuntos
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="middle" width="3.5cm">
+<column alignment="center" valignment="middle" width="3.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Variáveis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sistema Petrobras
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape italic
+Oilfield
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comprimento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ft$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compressibilidade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $kgf/cm^{2})^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $psi^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coeficiente de Estocagem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{m³}{(kgf/cm²)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{bbl}{psi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tempo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Permeabilidade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $md$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $md$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pressão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $kgf/cm²$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Viscosidade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $cp$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $cp$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vazão de Óleo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m³/d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $bbl/d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,0003484
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,0002637
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19,03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+141,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1/(2\pi)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,8936
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Método de Horner 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Esta parte deve ser apagada na versão final; serve apenas como lembrete
- dos itens que vocês precisam considerar
+Mantive o que tinha escrito sobre o método, apenas separei em sub seção
 \end_layout
 
 \end_inset
@@ -425,104 +1033,782 @@ Esta parte deve ser apagada na versão final; serve apenas como lembrete
 \end_layout
 
 \begin_layout Standard
-Um assunto é aquilo que é tratado ou abordado em uma discussão, em um estudo
- e é utilizado para orientar o leitor em um modelo amplo e complexo.
+Com os dados obtidos da pressão e o tempo em que cada uma foi medida (o
+ teste inteiro pode variar a duração desde algumas horas a alguns dias),
+ gera-se um gráfico semi-logarítmico em que seu coeficiente angular possui
+ uma relação intrínseca com a permeabilidade da formação e estima-se propriedade
+s pelo método de Horner, ilustrado pela Figura 3.2.
 \end_layout
 
-\begin_layout Itemize
-Se um grupo de classes troca muitas informações entre si, provavelmente
- as classes fazem parte de um mesmo assunto.
- Assim, classes que se relacionam por meio de conceitos em comum fazem parte
- de uma mesma área, são reunidas e formam um assunto (pacote).
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia-Leonam-Renan-AvaliacaoDeFormacoesPorDadosTestesPressao-v2/imagens/Figura3.2.png
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico semi-logaritimico obtido pelo Método de Horner, que fornece parâmetros
+ referentes ao reservatório
 \end_layout
 
-\begin_layout Itemize
-Em um pacote, os nomes de classes e de associações devem ser semelhantes.
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As equações apresentadas a seguir para determinação dos parâmetros são vistas
+ em |Adalberto Rosa, 2006|.
+\end_layout
+
+\begin_layout Standard
+A permeabilidade, que é definida como a capacidade de um material (tipicamente
+ uma rocha) de transmitir fluídos, pode ser inferida pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PermeabilidadeHORNER"
+
+\end_inset
+
+.
+ Na equação, 
+\family typewriter
+
+\begin_inset Formula $q$
+\end_inset
+
+
+\family default
+ [barris/d] é a vazão, 
+\family typewriter
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\family default
+ [adimensional] o fator volume-formação, 
+\family typewriter
+
+\begin_inset Formula $h$
+\end_inset
+
  
+\family default
+[pés] a altura da formação, 
+\family typewriter
+
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\family default
+ [cp] a viscosidade do fluido, e 
+\begin_inset Formula $m$
+\end_inset
+
+ [adimensional] é o coeficiente angular.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Preste atenção a semelhanças na forma.
- Procedimentos semelhantes indicam polimorfismo e são candidatos a superclasses.
- Usualmente a classe mais genérica de uma hierarquia de classes identifica
- um assunto.
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+k=\frac{1.151\alpha_{p}qB\mu}{mh}\label{eq:PermeabilidadeHORNER}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O fator de película 
+\begin_inset Formula $S$
+\end_inset
+
+ [adimensional] é definido como uma região ao redor do poço cuja permeabilidade
+ foi alterada, reduzida (por fluido de perfuração/completação, inchamento
+ de argilas, inversão de molhabilidade, etc) ou melhorada (através de processos
+ de acidificação, fraturamento hidráulico, etc.) e se dá pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:dano"
+
+\end_inset
+
+.
+ É uma equção adimensional, onde 
+\begin_inset Formula $ct$
+\end_inset
+
+ [1/psi] é a compressibilidade total, 
+\begin_inset Formula $rw$
+\end_inset
+
+ [pés] é o raio do poço, 
+\begin_inset Formula $tp$
+\end_inset
+
+ [dias] o tempo de produção do poço, 
+\begin_inset Formula $Pwf$
+\end_inset
+
+ [psi] é a pressão registrada no fechamento do poço,
+\begin_inset Formula $\Delta P_{skin}$
+\end_inset
+
+ [psi] é a queda de pressão devido ao dano e 
+\begin_inset Formula $n$
+\end_inset
+
+ [adimensional] é o coeficiente linear do gráfico.
+ Quanto maior o valor do fator de película, maior o dano, resultando em
+ menor produção e maior queda de pressão.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S=\frac{1.151.(m.log(tp+1)+n-Pwf)}{(-m-log(k/(c_{t}rw^{2})+3.23)}\label{eq:dano}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\Delta P_{skin}=0.869.(-m).s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A capacidade produtiva de um poço é caracterizada pelo índice de produtividade
  
+\begin_inset Formula $IP$
+\end_inset
+
+ [barris/(dias.psi)], que indica a necessidade de injeção de fluidos para
+ aumento da recuperação.
+ A eficiência de fluxo 
+\begin_inset Formula $EF$
+\end_inset
+
+ [adimensional] indica o quanto a produção está sendo afetada pelo fator
+ de película do poço.
+ Esses fatores, dados em porcentagem, são importantes para a engenharia
+ de reservatórios, pois definem a viabilidade de produção.
+ São definidos pela equações 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:IP"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:EF"
+
+\end_inset
+
+, sendo 
+\begin_inset Formula $Pi$
+\end_inset
+
+ [psi] a pressão inicial do reservatório, indicada pelo gráfico.
+ Valores maiores que 10 para o índice de produtividade são considerados
+ bons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+IP=\frac{q}{Pi-P_{wf}}\label{eq:IP}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+EF=\frac{Pi-P_{wf}-\Delta P{\scriptstyle skin}}{Pi-P_{wf}}\label{eq:EF}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O raio efetivo do poço 
+\begin_inset Formula $r_{w}^{'}$
+\end_inset
+
+ [pés] é definido como o tamanho teórico do poço incluindo o dano, calculado
+ pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:raioefetivo"
+
+\end_inset
+
+, sua unidade é [m].
+ Quanto maior o dano, menor o raio efetivo, pois o poço produz menos do
+ que deveria.
+ O raio efetivo de um poço estimulado (
+\begin_inset Formula $s<0)$
+\end_inset
+
+ é maior que o raio real, enquanto de um poço danificado (
+\begin_inset Formula $s>0)$
+\end_inset
+
+ é menor que o raio real.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+r_{w}^{'}=r_{w}e^{-s}.\label{eq:raioefetivo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O efeito de estocagem ocorre nos primeiros momentos da produção, fazendo
+ com que a vazão do poço não seja igual à do reservatório, havendo uma estocagem
+ de fluidos no interior do poço pela expansão e compressão do volume dos
+ hidrocarbonetos.
+ O coeficiente de estocagem 
+\begin_inset Formula $C$
+\end_inset
+
+ [barris/psi] é descrito pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:CoeficienteEstocagem"
+
+\end_inset
+
+, e sua duração,
+\begin_inset Formula $twbs$
+\end_inset
+
+[horas], pela equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TempodeEstocagem"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C=\frac{qB\triangle t}{24(P-Pwf)}\label{eq:CoeficienteEstocagem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+t_{wbs}=\frac{60.0+3.5*S}{(24C*\alpha{\scriptstyle p}kh\mu)}\label{eq:TempodeEstocagem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\color red
+Método de MDH
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ADICIONADA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+O método de MDH (Miller, Dyes & Hutchinson, 1950) fornece meios de se estimar
+ a permeabilidade, o fator de película e, ainda, a pressão média na região
+ drenada pelo poço, através da análise de dados de crescimento de pressão.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+A equação da pressão no poço, durante o período de crescimento de pressão,
+ com a aplicação do princípio da superposição é mostrada na Equação :
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula 
+\begin{equation}
+\frac{kh}{C_{2}qB\mu}\left(p_{i}-p_{ws}\right)=p_{wD}\left[\left(t_{p}+\Delta t\right)_{D}\right]-p_{wD}\left(\Delta t_{D}\right)\label{eq:pressaopococrespressao}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Se o período de produção é muito maior em relação ao tempo de fechamento,
+ tem-se que:
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula 
+\begin{equation}
+p_{wD}\left[\left(t_{p}+\Delta t\right)_{D}\right]\cong p_{wD}\left(t_{pD}\right).\label{eq:tproducaomaiortfechamento}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Assim, para 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+>>
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ a Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tproducaomaiortfechamento"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), fica simplificada:
+\begin_inset Formula 
+\begin{equation}
+\frac{kh}{C_{2}qB\mu}\left(p_{i}-p_{ws}\right)=p_{wD}\left(t_{pD}\right)-p_{wD}\left(\Delta t_{D}\right).\label{eq:eq2simplificada}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Para representar o termo de 
+\begin_inset Formula $p_{wD}\left(\Delta t_{D}\right)$
+\end_inset
+
+, emprega-se a aproximação logarítmica, ou seja, é admitido comportamento
+ de reservatório infinito após o fechamento:
+\begin_inset Formula 
+\begin{equation}
+p_{wD}\left(\Delta t_{D}\right)=\frac{1}{2}\ln\left(\frac{4\Delta t_{D}}{e^{\gamma}}\right)+s.\label{eq:aproxlog}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+A Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq2simplificada"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) se transforma em:
+\begin_inset Formula 
+\begin{equation}
+\frac{kh}{C_{2}qB\mu}\left(p_{i}-p_{ws}\right)=p_{wD}\left(t_{pD}\right)-\frac{1}{2}\ln\left(\frac{4\Delta t_{D}}{e^{\gamma}}\right)+s\label{eq:eq2comaproxlog}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+que pode também ser reescrita substituindo no termo logarítmico a definição
+ do tempo adimensional, usando o logaritmo na base 10 e rearranjando os
+ termos, obtendo:
+\begin_inset Formula 
+\begin{equation}
+p_{ws}=p_{i}-1,151\frac{C_{2}qB\mu}{kh}\left[0,8686p_{wD}\left(t_{pD}\right)-\log\left(\frac{4C_{1}k}{e^{\gamma}\phi\mu c_{t}r_{w}^{2}}\right)-0,8686s\right]+1,151\frac{C_{2}qB\mu}{kh}\log\Delta t.\label{eq:eq2comtempoadimensionalelog10}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Definindo 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+a pressão durante o fechamento correspondente a um tempo de fechamento unitário,
+ 
+\begin_inset Formula $\Delta t=1$
+\end_inset
+
+, então:
+\begin_inset Formula 
+\begin{equation}
+p_{1}=p_{i}-1,151\frac{C_{2}qB\mu}{kh}\left[0,8686p_{wD}\left(t_{pD}\right)-\log\left(\frac{4C_{1}k}{e^{\gamma}\phi\mu c_{t}r_{w}^{2}}\right)-0,8686s\right].\label{eq:defp1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+A Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq2comtempoadimensionalelog10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), pode ser compactada como:
+\begin_inset Formula 
+\begin{equation}
+p_{ws}=p_{1}+m\log\Delta t\label{eq:pwscompactada}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+em que:
+\begin_inset Formula 
+\begin{equation}
+m=1,151\frac{C_{2}qB\mu}{kh}\label{eq:calculom}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Os parâmetros do sistema poço-reservatório são determinados pelo ajuste
+ dos dados a uma linha reta, no gráfico 
+\begin_inset Formula $p_{ws}$
+\end_inset
+
+ versus 
+\begin_inset Formula $\log\Delta t$
+\end_inset
+
+ , como mostrado na Figura (Com o coeficiente angular 
+\begin_inset Formula $m$
+\end_inset
+
+, pode ser calculada a permeabilidade:
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula 
+\begin{equation}
+k=1,151\frac{C_{2}qB\mu}{mh}.\label{eq:calculopermeabilidademdh}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\color red
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/imagens/GRAFICO mdh.PNG
+	scale 190
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de MDH
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Para obter o fator de película, usa-se a queda de pressão no instante do
+ fechamento, admitindo que o reservatório se comporte como infinito.
+\begin_inset Formula 
+\begin{equation}
+p_{wD}\equiv\frac{kh}{C_{2}qB\mu}(p_{i}-p_{wff})=\frac{1}{2}\ln\left(\frac{4t_{pD}}{e^{\gamma}}\right)+s\label{eq:eq1pfatorpelicula}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+onde:
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Formula $p_{wff}$
+\end_inset
+
+= última pressão de fluxo antes do fechamento.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Durante o fechamento, o comportamento da pressão pode ser escrito como:
+\begin_inset Formula 
+\begin{equation}
+\frac{kh}{C_{2}qB\mu}(p_{i}-p_{ws})=\frac{1}{2}\ln\left(\frac{4t_{pD}}{e^{\gamma}}\right)-\frac{1}{2}\ln\left(\frac{4C_{1}\eta}{e^{\gamma}r_{w}^{2}}\right)-\frac{1}{2}\ln\left(\Delta t\right).\label{eq:pressaofechamento}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Onde 
+\begin_inset Formula $\eta=\nicefrac{k}{\phi\mu C_{t}}$
+\end_inset
+
+, é a constante de difusividade hidraúlica.
+ Fazendo então 
+\begin_inset Formula $\Delta t=1,$
+\end_inset
+
+a equação anterior é reescrita:
+\begin_inset Formula 
+\begin{equation}
+\frac{kh}{C_{2}qB\mu}(p_{i}-p_{1})=\frac{1}{2}\ln\left(\frac{4t_{pD}}{e^{\gamma}}\right)-\frac{1}{2}\ln\left(\frac{4C_{1}\eta}{e^{\gamma}r_{w}^{2}}\right).\label{eq:eqfechamentotempo1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Subtraindo a Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq1pfatorpelicula"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) da Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eqfechamentotempo1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), transformando para o logaritmo na base 10, utilizando a definição de
+ 
+\begin_inset Formula $m$
+\end_inset
+
+, explicita-se o fator de película:
+\begin_inset Formula 
+\begin{equation}
+s=1,151\left[\frac{p_{1}-p_{wff}}{m}-\log\left(\frac{C_{1}\eta}{r_{w}^{2}}\right)-0,3514\right].\label{eq:FatorPelicula}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+NÃO SEI SE VAI UTILIZARA queda de pressão devida ao efeito de película é
+ calculada por:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta p_{s}=08686ms$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+e o raio efetivo do poço é determinado pela expressão:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{w}^{'}=r_{w}e^{-s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+OBS: NOS SLIDES 
+\end_layout
+
+\begin_layout Plain Layout
+tempo adimensional 
+\begin_inset Formula $t_{D}=\frac{C_{1}kt}{\phi\mu c_{t}r_{w}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Identificação de pacotes – assuntos
-\end_layout
-
-\begin_layout Standard
-...aqui...
-\end_layout
-
-\begin_layout Itemize
-Nome Pacote: Descrição.
- O que é, para que serve, como se relaciona com os demais pacotes.
-\end_layout
-
-\begin_layout Itemize
-Nome Pacote: Descrição.
- O que é, para que serve, como se relaciona com os demais pacotes.
-\end_layout
-
-\begin_layout Itemize
-Nome Pacote: Descrição.
- O que é, para que serve, como se relaciona com os demais pacotes.
-\end_layout
-
-\begin_layout Section
-O que é o diagrama de pacotes
-\emph on
-
-\begin_inset Index idx
-status collapsed
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
-Diagrama de pacotes
+Readaptada com acréscimo e novo diagrama 
 \end_layout
-
-\end_inset
-
-
-\emph default
- – assuntos
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-assuntos
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-módulos
-\end_layout
-
-\end_inset
-
-
-\emph on
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Diagrama de pacotes (assuntos)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:diagrama de assuntos-pacotes"
 
 \end_inset
 
@@ -530,25 +1816,56 @@ name "subsec:diagrama de assuntos-pacotes"
 \end_layout
 
 \begin_layout Standard
-Um diagrama de pacotes é útil para mostrar as dependências entre as diversas
- partes do sistema; pode incluir: sistemas, subsistemas, hierarquias de
- classes, classes, interfaces, componentes, nós, colaborações e casos de
- uso.
+Após explicitar os conceitos, serão desenvolvidos pelo 
+\shape italic
+software 
+\shape default
+os seguintes conjuntos de assuntos (ou pacotes):
 \end_layout
 
-\begin_layout Standard
-O exemplo da Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Diagrama-de-Pacotes"
+\begin_layout Itemize
+Pacote TestePressão: apresenta os conceitos do teste de 
+\shape italic
+build-up
+\shape default
+.
+ Importa os dados do teste de pressão de um arquivo .dat que serão processados
+ para estimar os parâmetros do reservatório.
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Pacote Estatística: realiza a regressão linear dos dados passados no arquivo
+ .dat.
+ Deve apresentar conexão com o Pacote Reservatório, uma vez que recebe os
+ dados contidos nele.
+\end_layout
 
- apresenta um diagrama de pacotes para um sistema de métodos numéricos.
- Observe que o diagrama de pacotes inclui um pacote bibliotecas, o qual
- é dividido em bibliotecas matemáticas, de estatística e de simulação.
- A seguir o componente biblioteca de simulação será detalhado.
+\begin_layout Itemize
+Pacote Gráfico: gera os gráficos com a curva semi-logarítmica dos dados
+ da regressão linear feita no Pacote Matemático.
+ Também plota os dados de entrada da pressão versus tempo.
+\end_layout
+
+\begin_layout Itemize
+Pacote Reservatório: é o pacote que contém os dados do sistema poço-reservatório.
+\end_layout
+
+\begin_layout Itemize
+
+\color red
+Pacote Simulador: composto de diversas equações, calcula propriedades que
+ podem ser obtidas pela curva semi-logarítmica.
+ Contém, também,os conceitos matemáticos métodos que podem ser utilizados
+ para os cálculos das propriedades, MDH e Horner.
+ Os resultados dessas equações são parte da saída do programa.
  
+\end_layout
+
+\begin_layout Itemize
+Pacote Resultados: Os parâmetros calculados no Pacote Propriedades são fornecido
+s ao usuário através de um arquivo .dat e armazenados em um banco de dados.
+ O mesmo é feito com as curvas de pressão x tempo, que são fornecidas ao
+ usuário através de um arquivo de imagem e posteriormente armazenadas.
 \end_layout
 
 \begin_layout Section
@@ -556,19 +1873,26 @@ Diagrama de pacotes – assuntos
 \end_layout
 
 \begin_layout Standard
-...aqui...
-\end_layout
-
-\begin_layout Standard
-coloque aqui texto falando do diagrama de pacotes, referencie a figura.
- Veja Figura 
+A Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diagrama-de-Pacotes"
 
 \end_inset
 
-.
+ representa o diagrama de pacotes para o simulador de cálculos de parâmetros
+ de reservatório.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Tenho dúvida, se o gráfico apontaria no simulador ou nos resultados?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -580,7 +1904,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/AnaliseDeDominio.png
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/imagens/diagrama_de_pacotes_andreia_1.PNG
 	width 100text%
 
 \end_inset
@@ -613,6 +1937,10 @@ name "fig:Diagrama-de-Pacotes"
 \end_layout
 
 \begin_layout Description
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Nota: 
 \begin_inset space ~
 \end_inset
@@ -626,6 +1954,11 @@ Não perca de vista a visão do todo; do projeto de engenharia como um todo.
  Este é um diferencial fundamental do engenheiro em relação ao técnico,
  a capacidade de desenvolver projetos, de ver o todo e suas diferentes partes,
  de modelar processos/sistemas/produtos de engenharia.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
