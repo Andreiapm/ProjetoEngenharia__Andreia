@@ -146,7 +146,7 @@ thechapter - Projeto}
 
 \begin_layout Standard
 Neste capítulo do projeto de engenharia veremos questões associadas ao projeto
- do sistema, incluindo protocolos, recursos, plataformas suportadas, inplicações
+ do sistema, incluindo protocolos, recursos, plataformas suportadas, implicações
  nos diagramas feitos anteriormente, diagramas de componentes e implantação.
  Na segunda parte revisamos os diagramas levando em conta as decisões do
  projeto do sistema.
@@ -224,6 +224,20 @@ Protocolos
 
 \begin_deeper
 \begin_layout Itemize
+Neste projeto o software irá se comunicar com o componente externo Gnuplot,
+ que gerará gráficos, permitindo salvar imagens em disco.
+\end_layout
+
+\begin_layout Itemize
+A entrada de dados será efetuada via arquivo de texto e através do teclado.
+\end_layout
+
+\begin_layout Itemize
+Será utilizada a biblioteca padrão da linguagem C++.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
 Definição dos protocolos de comunicação entre os diversos elementos externos
  
 \begin_inset Newline newline
@@ -293,6 +307,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Recursos
@@ -313,6 +332,17 @@ Recursos
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+O programa utiliza o HD, o processador, o teclado, a memória, a tela e os
+ demais componentes internos do computador.
+\end_layout
+
+\begin_layout Itemize
+Será utilizado um arquivo de dados no formato .txt para leitura das informações
+ do teste de pressão.
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Itemize
 Identificação e alocação dos recursos globais, como os recursos do sistema
  serão alocados, utilizados, compartilhados e liberados.
@@ -363,108 +393,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
-\end_deeper
-\begin_layout Enumerate
-Controle
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Controle
-\end_layout
-
-\end_inset
-
-
-\begin_inset Separator latexpar
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Identificação e seleção da implementação de controle, seqüencial ou concorrente,
- baseado em procedimentos ou eventos.
- Implicam modificações no diagrama de execução.
- 
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Neste projeto blablabla
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Identificação das condições extremas e de prioridades.
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Neste projeto blablabla
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Identificação da necessidade de otimização.
- Por exemplo: prefira sistemas com grande capacidade de memória; prefira
- vários hds pequenos a um grande.
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Neste projeto blablabla
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Identificação e definição de 
-\emph on
-loops
-\emph default
- de controle e das escalas de tempo.
- 
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Neste projeto blablabla
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Identificação de concorrências – quais algoritmos podem ser implementados
- usando processamento paralelo.
- 
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Neste projeto blablabla
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Plataformas
@@ -485,6 +418,27 @@ Plataformas
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+O programa usará a linguaguem C++, portanto este será multiplataforma possuindo
+ suporte em diversos sistemas operacionais.
+\end_layout
+
+\begin_layout Itemize
+O software será desenvolvido no Windows e testado no GNU/Linux.
+\end_layout
+
+\begin_layout Itemize
+O software utilizará a biblioteca externa CGnuplot, permitindo o acesso
+ ao programa Gnuplot, para gerar gráficos.
+\end_layout
+
+\begin_layout Itemize
+O ambiente para montar a interface de desenvolvimento será o software CodeBlocks
+ (Windows).
+ O compilador será o gcc/g++.
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Itemize
 Identificação das estruturas arquitetônicas comuns.
  
@@ -576,10 +530,129 @@ o – IDE.
 Neste projeto blablabla
 \end_layout
 
-\end_deeper
-\end_deeper
 \begin_layout Enumerate
-Padrões de projeto
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+Controle
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Controle
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Identificação e seleção da implementação de controle, seqüencial ou concorrente,
+ baseado em procedimentos ou eventos.
+ Implicam modificações no diagrama de execução.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto blablabla
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Identificação das condições extremas e de prioridades.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto blablabla
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Identificação da necessidade de otimização.
+ Por exemplo: prefira sistemas com grande capacidade de memória; prefira
+ vários hds pequenos a um grande.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto blablabla
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Identificação e definição de 
+\emph on
+loops
+\emph default
+ de controle e das escalas de tempo.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto blablabla
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Identificação de concorrências – quais algoritmos podem ser implementados
+ usando processamento paralelo.
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto blablabla
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+5.
+ Padrões de projeto
 \begin_inset Separator latexpar
 \end_inset
 
@@ -614,6 +687,18 @@ se um item não for pertinente; pode ser retirado; ,mas somente na versão
 \end_layout
 
 \end_deeper
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Section
 Projeto orientado a objeto – POO
@@ -664,6 +749,10 @@ Envolve a otimização da estrutura de dados e dos algoritmos, a minimização
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Exemplo: na análise você define que existe um método para salvar um arquivo
  em disco, define um atributo nomeDoArquivo, mas não se preocupa com detalhes
  específicos da linguagem.
@@ -671,6 +760,11 @@ Exemplo: na análise você define que existe um método para salvar um arquivo
  cria um objeto específico para acessar o disco, podendo, portanto, acrescentar
  novas classes àquelas desenvolvidas na análise.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -693,6 +787,25 @@ name "subsec:Efeito-do-projeto-no-modelo-estrutural"
 
 
 \end_layout
+
+\begin_layout Itemize
+Estabelecer as dependências e restrições associadas à plataforma escolhida.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O software pode ser executado nas plataformas Windows e GNU/Linux.
+\end_layout
+
+\begin_layout Itemize
+O programa depende da instalação do software externo Gnuplot, para o funcionamen
+to do programa.
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Itemize
 Adicionar nos diagramas de pacotes as bibliotecas e subsistemas selecionados
@@ -720,21 +833,13 @@ Novas classes e associações oriundas das bibliotecas selecionadas e da linguag
 
 \begin_deeper
 \begin_layout Itemize
-Neste projeto blablabla
+Neste projeto 
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Estabelecer as dependências e restrições associadas à plataforma escolhida.
-\begin_inset Separator latexpar
 \end_inset
 
 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Neste projeto blablabla
 \end_layout
 
 \end_deeper
@@ -757,6 +862,17 @@ name "subsec:Efeito-do-projeto-no-modelo-dinamico"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+A elaboração do programa foi focada a orientação de objetos e os diagramas
+ foram modificados durante o desenvolvimento do código, com isso não houveram
+ mudanças nesa etapa.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+??????????
 \end_layout
 
 \begin_layout Itemize
@@ -790,6 +906,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Efeitos do projeto nos atributos
 \begin_inset Index idx
@@ -812,6 +933,11 @@ name "subsec:Efeito-do-projeto-nos-atributos"
 \end_layout
 
 \begin_layout Itemize
+Atributos para à leitura de dados do disco foram implementados.
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
 Atributos novos podem ser adicionados a uma classe, como, por exemplo, atributos
  específicos de uma determinada linguagem de softwareção (acesso a disco,
  ponteiros, constantes e informações correlacionadas).
@@ -827,6 +953,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Efeitos do projeto nos métodos
 \begin_inset Index idx
@@ -850,6 +981,17 @@ Efeitos do projeto nos métodos
 
 
 \end_layout
+
+\begin_layout Itemize
+O uso da função de salvar od gráficos gerados em formato .png foi permitida
+ pela classe externa Gnuplot.
+\end_layout
+
+\begin_layout Itemize
+A inserção de dados pelo usuário pelo teclado foi implementado, além da
+ leitura de disco.
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Itemize
 Em função da plataforma escolhida, verifique as possíveis alterações nos
@@ -932,6 +1074,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Efeitos do projeto nas heranças
 \begin_inset Index idx
@@ -964,6 +1111,19 @@ Heranças
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Essa etapa não envolveu mudanças no projeto.
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+???????
+\end_layout
+
+\begin_layout Itemize
+CONFERIR POSTERIORMENTE 
 \end_layout
 
 \begin_layout Itemize
@@ -1028,6 +1188,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Efeitos do projeto nas associações
 \begin_inset Index idx
@@ -1050,6 +1215,15 @@ Associações
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Essa etapa não envolveu mudanças no projeto.
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+CONFERIR DEPOIS
 \end_layout
 
 \begin_layout Itemize
@@ -1102,6 +1276,19 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Subsubsection
+CASO APÓS TESTES SEJA IDENTIFACO ESSE EFEITO, ACRESCENTAR POSTERIORMENTE!!!
+\end_layout
+
 \begin_layout Subsubsection
 Efeitos do projeto nas otimizações
 \begin_inset Index idx
@@ -1209,6 +1396,11 @@ Neste projeto blablabla
 \end_layout
 
 \end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Depois de revisados os diagramas da análise você pode montar dois diagramas
  relacionados à infraestrutura do sistema.
@@ -1316,7 +1508,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/fig-3-16-Diagrama-de-componentes.png
+	filename ../Programação Prática- Arquivo mestre Bueno/ProgramacaoPratica-Andreia_dePaulaMartuscelli-master/imagens/fig-3-16-Diagrama-de-componentes.png
 	lyxscale 90
 	width 100text%
 
@@ -1393,20 +1585,12 @@ reference "cap:Diagrama-de-implantação."
 
 \end_inset
 
- um exemplo de diagrama de implantação de um cluster.
- Observe a presença de um servidor conectado a um switch.
- Os nós do cluster (ou clientes) também estão conectados ao switch.
- Os resultados das simulações são armazenados em um servidor de arquivos
- (
-\emph on
-storage
-\emph default
-).
-\end_layout
-
-\begin_layout Standard
-Pode-se utilizar uma anotação de localização para identificar onde determinado
- componente está residente, por exemplo {localização: sala 3}.
+ o diagrama de implantação do programa.
+ Primeiramente, o simulador acessa os arquivos de dados no disco rígido,
+ contendo as informações registradas pelo teste de pressão.
+ O programa importa os arquivos e utiliza o teclado e o monitor para dispor
+ os insumos e resultados ao usuário, possibilitando a comunicação.
+ Os resultados e gráficos são armazenados no disco rígido.
 \end_layout
 
 \begin_layout Standard
@@ -1419,7 +1603,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/fig-3-17-diagrama-execucao.png
+	filename Diagramas Umbrello/DIAGRAMA DE IMPLANTACAO-1.PNG
 	lyxscale 90
 	width 100text%
 
