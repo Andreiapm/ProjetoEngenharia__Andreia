@@ -1116,7 +1116,7 @@ Heranças
 \begin_layout Itemize
 Essa etapa não envolveu mudanças no projeto.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 ???????
@@ -1220,7 +1220,7 @@ Associações
 \begin_layout Itemize
 Essa etapa não envolveu mudanças no projeto.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 CONFERIR DEPOIS
@@ -1494,7 +1494,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/fig-3-16-Diagrama-de-componentes.png
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/CAPTURAdiagramadecomponentes.PNG
 	lyxscale 90
 	width 100text%
 

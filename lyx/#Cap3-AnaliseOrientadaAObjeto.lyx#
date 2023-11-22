@@ -1,0 +1,721 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Análise Orientada a Objeto}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+AOO
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+AOO
+\end_layout
+
+\end_inset
+
+ – Análise Orientada a Objeto
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Análise orientada a objeto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:AOO"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A terceira etapa do desenvolvimento de um software é a AOO – Análise Orientada
+ a Objeto.
+ A AOO utiliza algumas regras para identificar os objetos de interesse,
+ as relações entre os pacotes, as classes, os atributos, os métodos, as
+ heranças, as associações, as agregações, as composições e as dependências.
+ 
+\end_layout
+
+\begin_layout Section
+Diagramas de classes
+\end_layout
+
+\begin_layout Standard
+O diagrama de classes é apresentado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-classes"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/diagrama de classe.PNG
+	scale 115
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de classes
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dicionário de classes
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Dicionário-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Classe CPoco: é a classe que possui as características/atributos do poço,
+ e tem uma função de entrada de dados por parte do usuário.
+\end_layout
+
+\begin_layout Itemize
+Classe CFluido: é a classe responsável por receber as propriedades do fluido
+ do usuário.
+\end_layout
+
+\begin_layout Itemize
+Classe CReservatorio: é a classe com uma função de entrada de dados pelo
+ usuário para informar as características do reservatório.
+\end_layout
+
+\begin_layout Itemize
+Classe CDadosTestePressao: é a classe que recebe os dados de teste de pressão
+ de um arquivo texto, que serão utilizados nos cálculos.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Classe CEscolhaMetodo: é a classe em que o usuário escolhe por qual método
+ ele deseja utilizar para obter os parâmetros do reservatório (não é necessária,
+ posso incluir dentro do simulador).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Classe CAjusteHorner: é a classe responsável por aplicar o método de Horner
+ com os dados obtidos no software.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+.calcular o tempo de Horner
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Classe CAjusteMDH: é a classe responsável por aplicar o método de MDH com
+ os dados obtidos.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Classe CAgarwal: é a classe responsável por calcular o tempo de Agarwal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Classe CEstatistica: é responsável por fazer a média e o desvio padrão de
+ vetores, necessário para a regressão linear dos dados.
+\end_layout
+
+\begin_layout Itemize
+Classe CAjusteCurvaMinimosQuadrados: é a classe que realiza a regressão
+ linear, por meio do método dos mínimos quadrados.
+\end_layout
+
+\begin_layout Itemize
+Classe CSimulador: é a classe principal, que exerce comunicação com os objetos
+ das outras classes para inferir parâmetros do reservatório e calcular as
+ variáveis provenientes de equações de correlação.
+\end_layout
+
+\begin_layout Itemize
+Classe CResultados: é a classe que interpreta os resultados obtidos e caracteriz
+a o reservatório.
+\end_layout
+
+\begin_layout Itemize
+Classe CComparacao: é a classe que compara os valores obtidos pelo método
+ de Horner e MDH.
+\end_layout
+
+\begin_layout Itemize
+O programa externo Gnuplot é responsável pela geração dos gráficos e exportação
+ de imagens.
+\end_layout
+
+\begin_layout Section
+Diagrama de sequência – eventos
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Eventos
+\end_layout
+
+\end_inset
+
+ e mensagens
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Mensagens
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de sequência
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de sequência"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\shape italic
+\emph on
+Diagrama de sequência geral
+\end_layout
+
+\begin_layout Standard
+Veja o 
+\shape italic
+\emph on
+diagrama de seqüência na
+\shape default
+\emph default
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-sequencia"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/Diagrama_de_sequencia_geral_precisasermelhoradoooo.PNG
+	lyxscale 85
+	scale 115
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de sequência
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-sequencia"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de comunicação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+comunicação
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Diagrama-de-Comunicação"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Diagrama-de-colaboração:"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Diagrama-de-Comunicação"
+
+\end_inset
+
+ apresenta o diagrama de comunicação.
+ Observe que há muita interação entre os objetos de cada classe, iniciando
+ pela entrada de dados para preencher os objetos de CPoco, CReservatorio
+ e CFluido.
+ Caso não ocorra erro na entrada, a classe DadosTestePressão importa os
+ dados do arquivo de texto e informa para a classes de ajuste.
+ Esta, por sua vez, utiliza a classe CAjusteCurvaMinimosQuadrados que faz
+ a regressão de dois vetores usando a média e o desvio padrão obtidos da
+ classe CEstatistica.
+ Após a função Ajuste (r), que encontra o coeficiente de estocagem, o Simulador
+ faz os cálculos dos parâmetros do reservatório com esses dados de entrada
+ e de importação.
+ A classe CResultados caracteriza o reservatorio com a função Resultados
+ (permeabilidade, fatorPelicula, indiceProdutividade, raioPoco, raioEfetivo).
+ Além disso, a classe CGnuplot permite gerar os gráficos da regressão e
+ salvá-los.
+ Por fim, com os parâmetros obtidos pelos métodos é possível realizar a
+ comparação por meio da classe CComparacao.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Essas interações são de vital importância para o funcionamento do programa
+ e a caracterização do reservatório.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/Diagrama_comunicacao_PRECISAMELHORAR-naoseidireito.PNG
+	lyxscale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de comunicação
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-comunicação"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de máquina de estado
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de estados"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um diagrama de máquina de estado representa os diversos estados que o objeto
+ assume e os eventos que ocorrem ao longo de sua vida ou mesmo ao longo
+ de um processo.
+ É usado para modelar aspectos dinâmicos do objeto.
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-maquina-de-estado"
+
+\end_inset
+
+ o diagrama de máquina de estado para um objeto da classe CComparacao.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/DIAGRAMA_MAQUINA_ESTADO_CCOMPARACAO.PNG
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado.
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-maquina-de-estado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de atividades
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-atividades"
+
+\end_inset
+
+ o diagrama de atividades correspondente a uma atividade específica do diagrama
+ da máquina de estado.
+ Os dados de entrada são fornecidos e importados.
+ Não havendo erros, o programa prossegue com os dados para os cálculos pelo
+ método de MDH e de Horner.
+ Posteriormente os parâmetros calculados por ambos são comparados e assim
+ finalizando o processo.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/DIAGRAMA_DE_ATIVIDADE_CCOMPARACAO1.PNG
+	lyxscale 85
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de atividades da classe CComparacao 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-atividades"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
