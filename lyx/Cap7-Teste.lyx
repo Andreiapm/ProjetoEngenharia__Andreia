@@ -706,6 +706,7 @@ status open
 \begin_inset Graphics
 	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/entrada dados registrador.PNG
 	scale 70
+	rotateOrigin center
 
 \end_inset
 
@@ -745,6 +746,7 @@ status open
 \begin_inset Graphics
 	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/GRAFICO MDH TOP.PNG
 	scale 70
+	rotateOrigin center
 
 \end_inset
 
@@ -792,7 +794,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/SALVAR DADOS VISUAL CODE.PNG
-	scale 70
+	scale 60
+	rotateOrigin center
 
 \end_inset
 
@@ -806,6 +809,225 @@ Tela do programa mostrando o nome do arquivo de saida a ser salvo, onde
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:CapturaWindows4-11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Testando agora para um exemplo do programa calculando pelo método de Horner.
+ A Figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-9-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ mostra a escolha do método Horner e entrada dos dados.
+ Em sequência, a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-10-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ mostra a entrada dos dados do registrador de pressão e a escolha do gráfico,
+ que será mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-10-1-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ E por fim, escolha do nome do arquivo de saída e salvando os dados, Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:CapturaWindows4-11-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/rodando para Horner.PNG
+	scale 70
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando escolha método Horner e entrada de dados.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-9-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/entrada dados registrador caso 1 horner.PNG
+	scale 70
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Entrada de dados do Registrador de pressão para o caso de Horner e a escolha
+ do gráfico.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-10-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/gráfico para Horner.PNG
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico de 
+\begin_inset Formula $Pws$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $log[(t+\Delta t)/\Delta t]$
+\end_inset
+
+ gerado pelo Gnuplot.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-10-1-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/salvando dados horner.PNG
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando o nome do arquivo de saida a ser salvo.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CapturaWindows4-11-1"
 
 \end_inset
 
