@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass extbook
 \begin_preamble
 \usepackage {graphicx}
@@ -30,16 +32,18 @@
 \language_package auto
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -70,6 +74,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Índice
 \shortcut idx
 \color #008000
@@ -84,7 +89,10 @@
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
@@ -120,16 +128,229 @@ thechapter - Documentação}
 \end_layout
 
 \begin_layout Standard
-Todo projeto de engenharia precisa ser bem documentado.
- Neste sentido, apresenta-se neste capítulo a documentação de uso do "software
- XXXX".
+A presente documentação refere-se ao uso do "Programa em C++ para avaliação
+ de formações por dados de teste de pressão
+\begin_inset Quotes erd
+\end_inset
+
+.
  Esta documentação tem o formato de uma apostila que explica passo a passo
- como usar o software.
+ ao usuário como usar o programa.
  
 \end_layout
 
 \begin_layout Section
-Documentação do usuário
+Manual do usuário
+\end_layout
+
+\begin_layout Standard
+O programa calcula a permeabilidade, o fator de película, a pressão inicial,
+ a eficiência de fluxo, o índice de produtividade, o coeficiente e o tempo
+ de estocagem do reservatório que foi submetido ao teste de pressão (de
+ curta ou longa duração).
+ Para o funcionamento correto do programa, deve-se seguir os seguintes passos:
+\end_layout
+
+\begin_layout Standard
+- Opcional: Para gerar o gráfico característico do reservatório: Ter instalado
+ o software livre 
+\begin_inset Quotes eld
+\end_inset
+
+Gnuplot
+\begin_inset Quotes erd
+\end_inset
+
+ no computador.
+ 
+\end_layout
+
+\begin_layout Standard
+- Os dados registrados no registrador de pressão do poço devem ser colocados
+ na pasta do programa, sob qualquer nome, em formato de texto.
+ 
+\end_layout
+
+\begin_layout Standard
+- Para abrir o programa no sistema operacional 
+\begin_inset Quotes eld
+\end_inset
+
+Windows
+\begin_inset Quotes erd
+\end_inset
+
+, simplesmente clique duas vezes em 
+\begin_inset Quotes eld
+\end_inset
+
+TestePressao.exe
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Caso o sistema operacional utilizado seja o 
+\begin_inset Quotes eld
+\end_inset
+
+Linux
+\begin_inset Quotes erd
+\end_inset
+
+, abra o terminal, selecione o caminho da pasta do programa.
+ Digite então: 
+\begin_inset Quotes eld
+\end_inset
+
+g++ *.cpp
+\begin_inset Quotes erd
+\end_inset
+
+ para compilar os arquivos do programa e em seguida 
+\begin_inset Quotes eld
+\end_inset
+
+./a.out
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+- Então o programa tem a interface própria para comunicação com o usuário.
+\end_layout
+
+\begin_layout Standard
+- Primeiramente, escolha se deseja rodar o programa ou sair: Digite 1 para
+ rodar ou 2 para sair e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Escolha por qual método você deseja calcular o teste de pressão: Digite
+ 1 para Método de Horner, 2 para Método MDH.
+\end_layout
+
+\begin_layout Standard
+- Escolha o sistema de unidades que o registrador de pressão trabalha: Digite
+ 1 para o sistema americano (oilfield), 2 para o brasileiro (petrobras)
+ ou 3 para o sistema internacional e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a porosidade do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a altura do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe o fator volume formação do fluido e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a compressibilidade total (rocha+fluido) e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a vazão de produção e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe o tempo de produção e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a pressão no poço e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe o raio do poço e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a pressão na posição de 1 hora, para no caso da escolha do método
+ MDH.
+\end_layout
+
+\begin_layout Standard
+Nesse momento, o programa fará a regressão linear dos dados importados e
+ mostrará na tela a equação da reta no formato 
+\begin_inset Quotes eld
+\end_inset
+
+y = a * x + b
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ele identificará o período de estocagem do reservatório para não haver
+ erro de cálculo, pois a análise do teste de pressão deve ser feita do período
+ transiente.
+\end_layout
+
+\begin_layout Standard
+- Escolha se quer que o programa gere o gráfico com o Gnuplot: Digite 1
+ para sim ou 2 para não e tecle enter.
+\end_layout
+
+\begin_layout Standard
+Nesse momento o programa:
+\end_layout
+
+\begin_layout Standard
+- Mostrará na tela os parâmetros do reservatório, com as devidas unidades.
+\end_layout
+
+\begin_layout Standard
+- Requisitará ao usuário o nome do arquivo de saida .dat com os parâmetros
+ calculados.
+\end_layout
+
+\begin_layout Standard
+- Em seguida, mostrará na tela os detalhes do período de estocagem do poço,
+ se houver.
+\end_layout
+
+\begin_layout Standard
+- Exibirá em tela a interpretação desses resultados no âmbito da exploração
+ de petróleo.
+\end_layout
+
+\begin_layout Standard
+Tecle enter e o programa perguntará se o usuário deseja variar algum parâmetro:
+ Digite 1 para sim 2 para voltar ao ínicio do programa.
+\end_layout
+
+\begin_layout Standard
+Caso o usuário digite 1, deverá seguir as instruções:
+\end_layout
+
+\begin_layout Standard
+- Selecionar o parâmetro: | 1-Porosidade | 2-Fator Volume de Formação |
+ 3-Compressibilidade | 4-Viscosidade |.
+\end_layout
+
+\begin_layout Standard
+- Selecionar o intervalo de varíação, e o valor de cada variação.
+\end_layout
+
+\begin_layout Standard
+Nesse momento serão gerados resultados referentes a cada valor adotado pelo
+ parâmetro selecionado, mostrados em tela para comparação, e exportados
+ para um arquivo .dat.
+\end_layout
+
+\begin_layout Standard
+- Tecle enter e o programa fará a mesma pergunta do início: Digite 1 para
+ rodar o programa novamente ou 2 para sair, tecle enter.
+ 
+\end_layout
+
+\begin_layout Standard
+Observação: Se houver uma entrada negativa de valor (equivocada), o programa
+ pedirá para o usuário entrar com o dado novamente.
 \end_layout
 
 \begin_layout Standard
@@ -137,52 +358,13 @@ Descreve-se aqui o manual do usuário, um guia que explica, passo a passo
  a forma de instalação e uso do software desenvolvido.
 \end_layout
 
-\begin_layout Subsection
-Como instalar o software
-\end_layout
-
-\begin_layout Standard
-Para instalar o software execute o seguinte passo a passo:
-\end_layout
-
-\begin_layout Itemize
-blablabla
-\end_layout
-
-\begin_layout Itemize
-..
-\end_layout
-
-\begin_layout Itemize
-.
-\end_layout
-
-\begin_layout Subsection
-Como rodar o software
-\end_layout
-
-\begin_layout Standard
-Para rodar o software ....blablabla
-\end_layout
-
-\begin_layout Standard
-Veja no Capítulo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Teste"
-
-\end_inset
-
- - Teste, exemplos de uso do software.
-\end_layout
-
 \begin_layout Section
 Documentação para desenvolvedor
 \end_layout
 
 \begin_layout Standard
-Apresenta-se nesta seção a documentação para o desenvolvedor, isto é, informaçõe
-s para usuários que queiram modificar, aperfeiçoar ou ampliar este software.
+Apresenta-se nesta seção a documentação para desenvolvedor, contendo assim
+ as informações para usuários que queiram modificar ou ampliar este software.
 \end_layout
 
 \begin_layout Subsection
@@ -199,6 +381,7 @@ Instalar o compilador g++ da GNU disponível em
 LatexCommand href
 name "http://gcc.gnu.org"
 target "http://gcc.gnu.org"
+literal "false"
 
 \end_inset
 
@@ -211,8 +394,8 @@ yum install gcc
 \end_layout
 
 \begin_layout Itemize
-Biblioteca CGnuplot; os arquivos para acesso a biblioteca CGnuplot devem
- estar no diretório com os códigos do software;
+Biblioteca CGnuplot; os arquivos para acesso a CGnuplot devem estar no diretório
+ com os códigos do software;
 \end_layout
 
 \begin_layout Itemize
@@ -224,6 +407,7 @@ gnuplot
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.gnuplot.info/"
+literal "false"
 
 \end_inset
 
@@ -236,34 +420,12 @@ gnuplot
  
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Coloque aqui quaisquer dependências de arquivos com dados
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Coloque aqui quaisquer dependências de softwares ou sistemas externos
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Subsection
-Como gerar a documentação usando doxygen
+Documentação usando doxygen
+\end_layout
+
+\begin_layout Standard
+documentação usando doxygen
 \end_layout
 
 \begin_layout Standard
@@ -280,102 +442,73 @@ doxygen
 \family default
  lê os arquivos com os códigos (*.h e *.cpp) e gera uma documentação muito
  útil e de fácil navegação no formato html.
- 
-\end_layout
-
-\begin_layout Itemize
-Veja informações sobre uso do formato JAVADOC em:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset CommandInset href
-LatexCommand href
-target "http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html"
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lista-de-classes-doxygen"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+ apresenta a listagem de classes gerado pelo doxygen.
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Veja informações sobre o software 
-\family typewriter
-doxygen
-\family default
- em
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset CommandInset href
-LatexCommand href
-target "http://www.stack.nl/~dimitri/doxygen/"
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Standard
-Passos para gerar a documentação usando o 
-\family typewriter
-doxygen
-\family default
-.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/doxygen projeto andreia.PNG
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lista de classes pelo doxygen.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Lista-de-classes-doxygen"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Documente o código usando o formato JAVADOC.
- Um bom exemplo de código documentado é apresentado nos arquivos da biblioteca
- CGnuplot, abra os arquivos 
-\family typewriter
-CGnuplot.h
-\family default
- e 
-\family typewriter
-CGnuplot.cpp
-\family default
- no editor de texto e veja como o código foi documentado.
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Abra um terminal.
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Itemize
-Vá para o diretório onde esta o código.
+\end_inset
+
+
 \end_layout
 
-\begin_deeper
-\begin_layout LyX-Code
-
-\family typewriter
-cd /caminho/para/seu/codigo
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Peça para o 
-\family typewriter
-doxygen
-\family default
- gerar o arquivo de definições (arquivo que diz para o doxygem como deve
- ser a documentação).
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-O software doxywizard é uma interface gráfica que permite a configuração
- do arquivo de definições (gerado pelo comando doxygen -g).
- 
-\end_layout
+Veja no Capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Teste"
 
-\begin_layout Plain Layout
-No GNU/Linux o doxywizard pode ser instaldo com o comando yum install doxygen-do
-xywizard.
+\end_inset
+
+ - Teste, exemplos de uso do software.
 \end_layout
 
 \end_inset
@@ -383,71 +516,23 @@ xywizard.
 
 \end_layout
 
-\begin_deeper
-\begin_layout LyX-Code
-
-\family typewriter
-dogygen -g
+\begin_layout Section
+Sugestões para trabalhos futuros
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-Peça para o 
-\family typewriter
-doxygen
-\family default
- gerar a documentação.
+O desenvolvedor pode acrescentar outro método de teste de pressão para avaliação
+ de formações ao programa.
+ Pela classe enumeração Método ele já consegue incluir na sequência para
+ os métodos de Horner e MDH que já existem no programa.
 \end_layout
 
-\begin_deeper
-\begin_layout LyX-Code
-
-\family typewriter
-doxygen
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
-Verifique a documentação gerada abrindo o arquivo html/index.html.
+Otimizar o código.
 \end_layout
 
-\begin_deeper
-\begin_layout LyX-Code
-firefox html/index.html
-\end_layout
-
-\begin_layout Standard
-ou
-\end_layout
-
-\begin_layout LyX-Code
-chrome html/index.html
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-Apresenta-se a seguir algumas imagens com as telas das saídas geradas pelo
- software 
-\family typewriter
-doxygen
-\family default
-.
-\end_layout
-
-\begin_layout Description
-Nota: 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Não perca de vista a visão do todo; do projeto de engenharia como um todo.
- Cada capítulo, cada seção, cada parágrafo deve se encaixar.
- Este é um diferencial fundamental do engenheiro em relação ao técnico,
- a capacidade de desenvolver projetos, de ver o todo e suas diferentes partes,
- de modelar processos/sistemas/produtos de engenharia.
+\begin_layout Itemize
+Realizar comparação com os valores encontrados para cada método.
 \end_layout
 
 \end_body

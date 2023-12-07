@@ -1,0 +1,67 @@
+# Project: TestedePressao
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = CAjusteCurva.o CAjusteCurvaMinimosQuadrados.o CBuildUp.o CCaracterizacaoReservatorio.o CDadosRegistradorPressao.o CEstatistica.o CFluido.o cgnuplot.o CMetodoHorner.o CMetodoMDH.o CPoco.o CReservatorio.o CSimuladorAnaliseTestePressao.o main.o
+LINKOBJ  = CAjusteCurva.o CAjusteCurvaMinimosQuadrados.o CBuildUp.o CCaracterizacaoReservatorio.o CDadosRegistradorPressao.o CEstatistica.o CFluido.o cgnuplot.o CMetodoHorner.o CMetodoMDH.o CPoco.o CReservatorio.o CSimuladorAnaliseTestePressao.o main.o
+LIBS     = 
+INCS     = 
+CXXINCS  = 
+BIN      = TestedePressao.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = del -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+CAjusteCurva.o: CAjusteCurva.cpp
+	$(CPP) -c CAjusteCurva.cpp -o CAjusteCurva.o $(CXXFLAGS)
+
+CAjusteCurvaMinimosQuadrados.o: CAjusteCurvaMinimosQuadrados.cpp
+	$(CPP) -c CAjusteCurvaMinimosQuadrados.cpp -o CAjusteCurvaMinimosQuadrados.o $(CXXFLAGS)
+
+CBuildUp.o: CBuildUp.cpp
+	$(CPP) -c CBuildUp.cpp -o CBuildUp.o $(CXXFLAGS)
+
+CCaracterizacaoReservatorio.o: CCaracterizacaoReservatorio.cpp
+	$(CPP) -c CCaracterizacaoReservatorio.cpp -o CCaracterizacaoReservatorio.o $(CXXFLAGS)
+
+CDadosRegistradorPressao.o: CDadosRegistradorPressao.cpp
+	$(CPP) -c CDadosRegistradorPressao.cpp -o CDadosRegistradorPressao.o $(CXXFLAGS)
+
+CEstatistica.o: CEstatistica.cpp
+	$(CPP) -c CEstatistica.cpp -o CEstatistica.o $(CXXFLAGS)
+
+CFluido.o: CFluido.cpp
+	$(CPP) -c CFluido.cpp -o CFluido.o $(CXXFLAGS)
+
+cgnuplot.o: cgnuplot.cpp
+	$(CPP) -c cgnuplot.cpp -o cgnuplot.o $(CXXFLAGS)
+
+CMetodoHorner.o: CMetodoHorner.cpp
+	$(CPP) -c CMetodoHorner.cpp -o CMetodoHorner.o $(CXXFLAGS)
+
+CMetodoMDH.o: CMetodoMDH.cpp
+	$(CPP) -c CMetodoMDH.cpp -o CMetodoMDH.o $(CXXFLAGS)
+
+CPoco.o: CPoco.cpp
+	$(CPP) -c CPoco.cpp -o CPoco.o $(CXXFLAGS)
+
+CReservatorio.o: CReservatorio.cpp
+	$(CPP) -c CReservatorio.cpp -o CReservatorio.o $(CXXFLAGS)
+
+CSimuladorAnaliseTestePressao.o: CSimuladorAnaliseTestePressao.cpp
+	$(CPP) -c CSimuladorAnaliseTestePressao.cpp -o CSimuladorAnaliseTestePressao.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)

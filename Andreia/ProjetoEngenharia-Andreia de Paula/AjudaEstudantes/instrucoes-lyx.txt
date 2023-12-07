@@ -1,0 +1,66 @@
+Usando o editor profissional LyX/TeX/LaTeX
+==========================================
+    O lyx esta disponibilizado em http://www.lyx.org.
+    Baixe a versão mais recente.
+    Instale.
+    Leia o tutorial. Veja vídeos na internet.
+    Se tiver dúvidas procure seus colegas, vários já sabem usar o lyx.
+    Se continuar com dúvidas procure o monitor.
+    Se continuar com dúvidas me procure.
+
+    Dica para usuários Windows:
+    ==============================
+    - Se for usar o Windows instale a versão completa do LyX, disponível no site:
+    http://wiki.lyx.org/Windows/Windows
+
+    - Veja o que diz o site em  20/08-2020:
+    Current stable version: 2.3.0
+    Standard installer: LyX-230-Installer-005.exe (58 MB). This installer requires that LaTeX (MikTeX or TeXLive)
+    are	already installed.
+    Previous stable version: 2.2.3
+    Standard installer: LyX-230-Installer-005.exe (53 MB). This installer requires that LaTeX (MikTeX or TeXLive)
+    are already installed.
+    Versions for Cygwin:
+    If you use Cygwin on Windows, it may be more convenient to use the cygwin binary, since latex, python, etc.
+    are all available from cygwin. You should download lyx-2.3.0-cygwin.tar.gz, un-tar it using Cygwin (not native)
+    tools, and follow the instructions . See LyXOnCygwin for more information.
+
+    Dica abntex:
+    =============
+    Se após a instalação do LyX o abntex não funcionar tente instalar o pacote abntex-lyx-0.8-2.noarch.
+    Se o projeto usa abntex você tem de instalar o abntex.
+
+    Comandos:
+    # instala o abntex2
+    dnf install texlive-abntex2
+    # informações sobre o pacote
+    rpm -qi texlive-abntex2
+    # lista de arquivos do pacote
+    rpm -ql texlive-abntex2
+
+    Exemplo, o Comando rpm -ql texlive-abntex2 me mostra os arquivos instaldos.
+/usr/share/licenses/texlive-abntex2
+/usr/share/licenses/texlive-abntex2/lppl1.3.txt
+/usr/share/texlive/texmf-dist/bibtex/bib/abntex2
+/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib
+/usr/share/texlive/texmf-dist/bibtex/bst/abntex2
+/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst
+/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-num.bst
+/usr/share/texlive/texmf-dist/tex/latex/abntex2
+/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2.cls
+/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2abrev.sty
+/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2cite.sty
+
+    Dica usuário GNU/Linux
+    =======================
+    Na minha máquina antiga tenho instalado os seguintes pacotes:
+    abntex-lyx-0.8-2.noarch
+    lyx-common-2.1.3-1.fc21.noarch
+    lyx-2.1.3-1.fc21.x86_64
+    lyx-fonts-2.1.3-1.fc21.noarch
+
+    Na máquina atual tenho
+    texlive-abntex2-svn49248-19.fc31.noarch
+    lyx-fonts-2.3.5-1.fc31.noarch
+    lyx-common-2.3.5-1.fc31.noarch
+    lyx-2.3.5-1.fc31.x86_64

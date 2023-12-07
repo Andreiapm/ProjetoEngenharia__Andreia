@@ -1,0 +1,10 @@
+<map id="CSimuladorAnaliseTestePressao" name="CSimuladorAnaliseTestePressao">
+<area shape="rect" id="node2" href="$classCFluido.html" title="Classe contendo as caracteristicas do fluido produzido. " alt="" coords="5,365,179,545"/>
+<area shape="rect" id="node3" href="$classCCaracterizacaoReservatorio.html" title="Classe que caracteriza o reservatorio. " alt="" coords="204,416,399,493"/>
+<area shape="rect" id="node4" href="$classCAjusteCurva.html" title="Classe que executa a regressao linear e ajusta ate a correlacao satisfatoria. " alt="" coords="423,379,555,530"/>
+<area shape="rect" id="node5" href="$classCAjusteCurvaMinimosQuadrados.html" title="Classe que obtem os coeficiente da regressao linear por meio do metodo dos minimos quadrados..." alt="" coords="381,163,597,299"/>
+<area shape="rect" id="node6" href="$classCEstatistica.html" title="Classe que calcula estatisticas do vetor, como media e desvio padrao, util para regressao. " alt="" coords="427,6,551,98"/>
+<area shape="rect" id="node7" href="$classCPoco.html" title="Classe contendo as caracteristicas do poco. " alt="" coords="579,350,716,559"/>
+<area shape="rect" id="node8" href="$classCDadosRegistradorPressao.html" title="Classe que contem dados registrados do registrador de pressao. " alt="" coords="741,372,925,537"/>
+<area shape="rect" id="node9" href="$classCReservatorio.html" title="Classe contendo as caracteristicas do reservatorio. " alt="" coords="950,357,1140,552"/>
+</map>

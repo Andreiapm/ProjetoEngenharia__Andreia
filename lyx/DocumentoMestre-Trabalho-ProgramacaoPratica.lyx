@@ -165,7 +165,7 @@ filename "Cap3-AnaliseOrientadaAObjeto.lyx"
 \align block
 \begin_inset CommandInset include
 LatexCommand include
-filename "Cap4-Projeto.lyx"
+filename "Cap6-Implementacao.lyx"
 
 \end_inset
 
@@ -173,6 +173,122 @@ filename "Cap4-Projeto.lyx"
 \end_layout
 
 \begin_layout Standard
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap7-Teste.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap8-Documentacao.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{Referências} 
+\backslash
+chead{} 
+\backslash
+rhead{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "bibliografia"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap0-Introducao-Escopo-Objetivos.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap1-Especificacao.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap2-Elaboracao.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap3-AnaliseOrientadaAObjeto.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align block
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap4-Projeto.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \align block
 \begin_inset Note Note
 status collapsed
@@ -194,8 +310,23 @@ o projeto orientado a objeto deixou de ser capítulo e virou uma seção dentro
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align block
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 

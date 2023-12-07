@@ -1,0 +1,37 @@
+Site com este modelo:
+https://github.com/ldsc/ModeloDocumento-ProjetoEngenharia-ProgramacaoPratica
+
+Tags:
+Versao-1.0-ModelagemTradicional : Usada até final de 2021.
+Versao-1.0-ModelagemAgil : Usada a partir de 2022.
+
+Branchs:
+ModelagemTradicional
+ModelagemAgil
+
+Comandos Básicos de GIT
+==========================
+git config --global user.email andreduartebueno@google.com
+.gitignore       -> arquivo com lista do que será ignorado (extensões: ex: *.o *~).
+git init         -> inicializa repositório.
+git add          -> adiciona arquivos/diretórios.
+git rm           -> remove arquivos/diretórios.
+git commit –m “msg” -> cria um commit a ser enviado para servidor.
+git push         -> REP_LOCAL => REP_SERVIDOR (envia para servidor).
+git status       -> estado do repositório.
+git pull         -> REP_LOCAL <= REP_SERVIDOR (recebe).
+git tag          -> cria uma tag.
+git log          -> exibe uma lista de compromissos e detalhes.
+git show         -> mostra informações.
+git ls-tree HEAD                -> mostra informações árvore diretórios.
+git cat-file                    -> mostra arquivo.
+git grep                        -> pesquisa.
+==Ramos==
+git clone http://path           -> clona projeto.
+git checkout -b <branch-name>   -> cria ramo e alterna para ele.
+git checkout <branch-name>      -> alterna para o ramo <branch-name>.
+git branch                      -> lista os ramos.
+git branch –d <branch-name>     -> deleta ramo.
+git merge <branch-name>         -> mesclar uma ramificação no ramo ativo.
+git diff                        -> listar diferenças / conflitos.
+git stash                       -> salvar as mudanças sem gerar um commit.

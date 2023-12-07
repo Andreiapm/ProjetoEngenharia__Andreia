@@ -932,7 +932,11 @@ Etapas:
 
 \begin_layout Plain Layout
 4.
- Gerar gráficos.
+ Gerar gráficos, 
+\color red
+conforme o método escolhido
+\color inherit
+.
 \end_layout
 
 \begin_layout Plain Layout
@@ -944,7 +948,7 @@ Etapas:
 
 \color red
 6.
- Comparar os resultados dos dois métodos.
+ Caracterizar o reservatório também com a escolha do método MDH.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1036,7 +1040,7 @@ reference "cap:Diagrama-caso-uso-geral"
 
  mostra o usuário inserindo os dados do teste de pressão, fornecendo os
  dados do fluido e do reservatório, necessários para os cálculos dos parâmetros
- do reservatório a serem determinados e analisando os resultados.
+ do reservatório a serem determinados e caracterizando o reservatório.
  Demonstra a interação do usuário com o programa.
 \end_layout
 
@@ -1049,7 +1053,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/imagens/DIAGRAMA_CASO_DE_USO_GERAL_ANDREIA_CORRIGIDO.PNG
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/caso de uso geral.PNG
 	width 100text%
 
 \end_inset
@@ -1106,13 +1110,14 @@ reference "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
 \end_inset
 
  mostra o usuário inserindo os dados.
- O simulador realiza a regressão semi-logarítmica e calcula os parâmetros
- do reservatório.
- O usuário escolhe qual método quer utilizar para calcular os parâmetros.
- Caso escolha primeiro o método de MDH e depois também queira calcular pelo
- método de Horner, será possível comprar os resultados obtidos por meio
- deles.
- E por fim ocorre a análise dos resultados.
+ O usuário escolhe qual método quer utilizar para calcular os parâmetros,
+ assim o simulador realiza a regrressão e calcula os parâmetros do reservatório
+ de acordo com essa escolha.
+ E tambémo gráfico de pressão pelo tempo é gerado de adequado para o método
+ escolhido.
+ O usuário após obter os resultados, pode selecionar a variação de algum
+ dado de entrada, como porosidade viscosidade e com isso obter novos resultados
+ que podem ser salvos, obtidos por essa variação.
 \end_layout
 
 \begin_layout Standard
@@ -1124,7 +1129,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/imagens/DIAGRAMA_CASO_DE_USO_ESPECIFICO_ANDREIA_CORRIGIDO.PNG
+	filename C:/Users/User/Desktop/2021.2/LENEP/PROGRAMAÇÃO PRÁTICA/ProjetoEngenharia__Andreia_2021-master/DIAGRAMAS-NEW/diagrama de caso de uso específico.PNG
 	width 93text%
 
 \end_inset
@@ -1136,8 +1141,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama de caso de uso específico -Escolhendo os dois métodos e comparando
- os resultados
+Diagrama de caso de uso específico -Escolhendo o método e variando um parâmetro
+ de entrada, sendo salvo novamente os resultados com essa variação.
 \begin_inset CommandInset label
 LatexCommand label
 name "cap:Diagrama-de-caso-de-uso-especifico:Titulo"

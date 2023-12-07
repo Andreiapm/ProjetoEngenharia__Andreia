@@ -941,7 +941,7 @@ MACAÉ - RJ
 \begin_inset Newline newline
 \end_inset
 
-SETEMBRO - 2021
+DEZEMBRO - 2023
 \end_layout
 
 \begin_layout Standard
@@ -1048,10 +1048,8 @@ io.
 \color red
 Este projeto, frente a outros já desenvolvidos, possui dois diferenciais:
  a realização dos cálculos dos parâmetros de reservatório por meio dos métodos
- de Horner e método MDH e a comparação de seus resultados; e a possibilidade
- de variação de um determinado parâmetro, e a visualização de como tal variação
- influenciará no comportamento do reservatório.
- 
+ de Horner e método MDH; e a possibilidade de variação de um determinado
+ parâmetro, e a possibilidade de inclusão de novos métodos futuramente.
 \end_layout
 
 \begin_layout Section
@@ -1160,7 +1158,8 @@ Estimar efeito de estocagem e sua duração;
 \end_layout
 
 \begin_layout Itemize
-Apresentar de forma gráfica o comportamento da pressão ao longo do tempo;
+Apresentar de forma gráfica o comportamento da pressão ao longo do tempo
+ conforme cada método;
 \end_layout
 
 \begin_layout Itemize
@@ -1182,8 +1181,7 @@ Utilizar o método de Horner e o método de MDH, de acordo com a escolha do
 \begin_layout Itemize
 
 \color red
-Realizar comparação dos resultados dos parâmetros de acordo com o método
- realizado.
+Realizar a compilação dos métodos e caracterizar o reservatório.
 \begin_inset Note Note
 status open
 

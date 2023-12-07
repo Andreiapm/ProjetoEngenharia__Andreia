@@ -1,0 +1,33 @@
+Como esta organizado o diretório?
+=================================
+O diretório do modelo padrão tem os sequintes subdiretórios:
+
+doc
+    Diretório com cópia dos manuais:
+    - ManualDoUsuario.pdf
+    Arquivo com instruções básicas de como instalar e usar o programa.
+    
+    - ManualDoDesenvolvedor.pdf
+    Arquivo com todas as instruções e explicações de como o software foi desenvolvido, incluindo os capítulos:
+    Especificação/elaboração/análise/projeto/implementação/teste/documentação.
+    
+doc/ManualDoDesenvolvedor:
+    Diretório onde ficarão os arquivos do lyx usados para gerar o ManualDoDesenvolvedor.
+    A ideia é que estes arquivos do lyx contenham todas as informações e instruções de como o software foi desenvolvido, permitindo aos interessados modificar/melhorar o software desenvolvido.
+
+doc/ManualDoDesenvolvedor/imagens:
+	Neste diretório você deve colocar todas as imagens a serem utilizadas e referenciadas no manual do desenvolvedor.
+
+doc/ManualDoUsuario:
+    Diretório onde ficarão os arquivos do lyx usados para gerar o ManualDoUsuario.  
+    Note que neste manual não entram informações de como o software pode ser modificado.
+    São apenas instruções de como instalar e usar o programa, o foco é o usuário final.
+    
+doc/ManualDoUsuario/imagens:
+	Neste diretório você deve colocar todas as imagens a serem utilizadas e referenciadas no manual do Usuário.
+
+src:  
+    Neste diretório você deve colocar todas as listagens de código, arquivos .h .cpp.
+
+test:
+    Neste diretório estão programas e arquivos usados para testar o software desenvolvido.

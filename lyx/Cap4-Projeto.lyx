@@ -225,7 +225,7 @@ Protocolos
 \begin_deeper
 \begin_layout Itemize
 Neste projeto o software irá se comunicar com o componente externo Gnuplot,
- que gerará gráficos, permitindo salvar imagens em disco.
+ que plotará os gráficos, permitindo salvar imagens em disco.
 \end_layout
 
 \begin_layout Itemize
@@ -312,6 +312,22 @@ Neste projeto blablabla
 
 \end_layout
 
+\begin_layout Itemize
+Definição do formato dos arquivos gerados pelo programa.
+ Por exemplo: prefira formatos abertos, como arquivos txt e xml.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+neste projeto o programa terá como entrada arquivos de extensão .dat.
+ Serão gerados arquivos com extensão .dat e .jpeg.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Recursos
@@ -337,6 +353,22 @@ O programa utiliza o HD, o processador, o teclado, a memória, a tela e os
  demais componentes internos do computador.
 \end_layout
 
+\begin_layout Itemize
+Identificação da necessidade do uso de banco de dados.
+ Implicam em modificações nos diagramas de atividades e de componentes.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto não há necessidade da criação de um banco de dados.
+ Os arquivos gerados serão salvo emum diretório pré-determinado pelo usuário.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Será utilizado um arquivo de dados no formato .txt para leitura das informações
  do teste de pressão.
@@ -400,6 +432,53 @@ Neste projeto blablabla
 
 \end_deeper
 \begin_layout Enumerate
+Controle
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Controle
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto o controle será sequencial.
+\end_layout
+
+\begin_layout Itemize
+Neste projeto não há necessidade da criação de um banco de dados.
+ Os arquivos gerados serão salvo em um diretório pré-determinado pelo usuário.
+\end_layout
+
+\begin_layout Itemize
+Identificação da necessidade de otimização.
+ Por exemplo: prefira sistemas com grande capacidade de memória; prefira
+ vários hds pequenos a um grande.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto não ha necessidade de uso de processos de otimização.
+ Os cálculos realizados requerem pouco espaço na memória, tanto física,
+ quando te processamento.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
 Plataformas
 \begin_inset Index idx
 status collapsed
@@ -424,7 +503,28 @@ O programa usará a linguaguem C++, portanto este será multiplataforma possuind
 \end_layout
 
 \begin_layout Itemize
-O software será desenvolvido no Windows e testado no GNU/Linux.
+O software irá operar nos sistemas operacionais Windows e GNU/Linux, sendo
+ desenvolvido e testado em ambos os sistemas.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+O software será desenvolvido no Windows
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+e testado no GNU/Linux.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -433,8 +533,8 @@ O software utilizará a biblioteca externa CGnuplot, permitindo o acesso
 \end_layout
 
 \begin_layout Itemize
-O ambiente para montar a interface de desenvolvimento será o software CodeBlocks
- (Windows).
+O ambiente para montar a interface de desenvolvimento será o software Dev
+ c++ (Windows).
  O compilador será o gcc/g++.
 \begin_inset Note Note
 status collapsed
@@ -735,7 +835,7 @@ name "sec:Projeto-orientado-a-objeto"
 O projeto orientado a objeto é a etapa posterior ao projeto do sistema.
  Baseia-se na análise, mas considera as decisões do projeto do sistema.
  Acrescenta a análise desenvolvida e as características da plataforma escolhida
- (hardware, sistema operacional e linguagem de softwareção).
+ (hardware, sistema operacional e linguagem de programação).
  Passa pelo maior detalhamento do funcionamento do software, acrescentando
  atributos e métodos que envolvem a solução de problemas específicos não
  identificados durante a análise.
@@ -788,6 +888,57 @@ name "subsec:Efeito-do-projeto-no-modelo-estrutural"
 
 \end_layout
 
+\begin_layout Itemize
+Adicionar nos diagramas de pacotes as bibliotecas e subsistemas selecionadaos
+ no projeto do sistema.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto foi utilizada como biblioteca gráfica CGnuplot.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Adicionar nos diagramas de pacotes as bibliotecas e subsistemas selecionados
+ no projeto do sistema (exemplo: a biblioteca gráfica selecionada).
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto blablabla
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Novas classes e associações oriundas das bibliotecas selecionadas e da linguagem
+ escolhida devem ser acrescentadas ao modelo.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Estabelecer as dependências e restrições associadas à plataforma escolhida.
 \begin_inset Separator latexpar
@@ -867,7 +1018,7 @@ name "subsec:Efeito-do-projeto-no-modelo-dinamico"
 \begin_layout Itemize
 A elaboração do programa foi focada a orientação de objetos e os diagramas
  foram modificados durante o desenvolvimento do código, com isso não houveram
- mudanças nesa etapa.
+ mudanças nessa etapa.
 \begin_inset Note Note
 status collapsed
 
@@ -935,7 +1086,7 @@ name "subsec:Efeito-do-projeto-nos-atributos"
 \begin_layout Itemize
 Atributos para à leitura de dados do disco foram implementados.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 Atributos novos podem ser adicionados a uma classe, como, por exemplo, atributos
@@ -983,7 +1134,7 @@ Efeitos do projeto nos métodos
 \end_layout
 
 \begin_layout Itemize
-O uso da função de salvar od gráficos gerados em formato .png foi permitida
+O uso da função de salvar os gráficos gerados em formato .png foi permitida
  pela classe externa Gnuplot.
 \end_layout
 
@@ -1114,7 +1265,7 @@ Heranças
 \end_layout
 
 \begin_layout Itemize
-Essa etapa não envolveu mudanças no projeto.
+A classe CBuildup é herdada pelos métodos.
 \begin_inset Note Note
 status collapsed
 
@@ -1218,7 +1369,7 @@ Associações
 \end_layout
 
 \begin_layout Itemize
-Essa etapa não envolveu mudanças no projeto.
+Houve a utilização de ponteiros, para apontar o método que deverá ser utilizado.
 \begin_inset Note Note
 status collapsed
 
@@ -1476,7 +1627,7 @@ implementation
 
 \end_inset
 
- O subsistema biblioteca Gnuplot, um subsistema exerno, inclui os arquivos
+ O subsistema biblioteca Gnuplot, um subsistema externo, inclui os arquivos
  de código da biblioteca CGnuplot e a biblioteca em si .O subsistema banco
  de dados representa o arquivo que o programa importará os dados a serem
  manipulados.
@@ -1494,7 +1645,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/imagens/CAPTURAdiagramadecomponentes.PNG
+	filename C:/Users/User/Documents/GitHub/DIAGRAMAS-NEW/Diagrama de componentes Umbrello.PNG
 	lyxscale 90
 	width 100text%
 

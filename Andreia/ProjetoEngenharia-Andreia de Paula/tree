@@ -1,0 +1,36 @@
+.
+├── AjudaEstudantes
+│   ├── instrucoes-git.txt
+│   ├── instrucoes-javadoc-doxygen.txt
+│   ├── instrucoes-lyx.txt
+│   ├── intrucoes-diretorio.txt
+│   └── tree-listaCompletaArquivosProjeto
+├── doc
+│   ├── instrucoes
+│   ├── ManualDoDesenvolvedor
+│   ├── ManualDoUsuario
+│   └── ManualTecnico
+├── master
+├── MaterialAuxiliar
+│   └── leiame.txt
+├── MaterialExterno
+│   ├── Gnuplot
+│   ├── guiasReferencia
+│   └── leiame.txt
+├── README.md
+├── src
+│   ├── CAplicacao.cpp
+│   ├── CAplicacao.h
+│   ├── Doxyfile
+│   ├── instrucoes
+│   ├── leiame.txt
+│   ├── Programa.cpp
+│   └── Programa.out
+├── test
+│   ├── instrucoes
+│   ├── test1
+│   ├── test2
+│   └── test3
+└── tree
+
+14 directories, 19 files

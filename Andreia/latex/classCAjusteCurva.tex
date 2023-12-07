@@ -1,0 +1,69 @@
+\hypertarget{classCAjusteCurva}{\section{C\-Ajuste\-Curva Class Reference}
+\label{classCAjusteCurva}\index{C\-Ajuste\-Curva@{C\-Ajuste\-Curva}}
+}
+
+
+Classe que executa a regressao linear e ajusta ate a correlacao satisfatoria.  
+
+
+
+
+{\ttfamily \#include $<$C\-Ajuste\-Curva.\-h$>$}
+
+
+
+Inheritance diagram for C\-Ajuste\-Curva\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classCAjusteCurva__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\-Ajuste\-Curva\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classCAjusteCurva__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCAjusteCurva_a0687a76e2f668770408276cf0b9731a5}{void \hyperlink{classCAjusteCurva_a0687a76e2f668770408276cf0b9731a5}{Regressao} (std\-::vector$<$ double $>$ vx, std\-::vector$<$ double $>$ vy, double z)}\label{classCAjusteCurva_a0687a76e2f668770408276cf0b9731a5}
+
+\begin{DoxyCompactList}\small\item\em Funcao que executa a regressao linear atraves do metodo dos minimos quadrados. \end{DoxyCompactList}\item 
+\hypertarget{classCAjusteCurva_aa7a0c356cb514926d8fcc96f069744b3}{void \hyperlink{classCAjusteCurva_aa7a0c356cb514926d8fcc96f069744b3}{Ajuste} (std\-::vector$<$ double $>$ vx, std\-::vector$<$ double $>$ vy, double z)}\label{classCAjusteCurva_aa7a0c356cb514926d8fcc96f069744b3}
+
+\begin{DoxyCompactList}\small\item\em Funcao que ajusta a regressao para o periodo correto, removendo os pontos referentes a estocagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCAjusteCurva_ad475e0f4f3c7b77bf10a00e4adb46282}{double \hyperlink{classCAjusteCurva_ad475e0f4f3c7b77bf10a00e4adb46282}{m}}\label{classCAjusteCurva_ad475e0f4f3c7b77bf10a00e4adb46282}
+
+\begin{DoxyCompactList}\small\item\em coef. angular \end{DoxyCompactList}\item 
+\hypertarget{classCAjusteCurva_a5c75119dc972a7c7cfd067a9b74c3642}{double \hyperlink{classCAjusteCurva_a5c75119dc972a7c7cfd067a9b74c3642}{n}}\label{classCAjusteCurva_a5c75119dc972a7c7cfd067a9b74c3642}
+
+\begin{DoxyCompactList}\small\item\em coef. linear \end{DoxyCompactList}\item 
+\hypertarget{classCAjusteCurva_a21ca23b4c39833776028822f3de6758b}{double \hyperlink{classCAjusteCurva_a21ca23b4c39833776028822f3de6758b}{r}}\label{classCAjusteCurva_a21ca23b4c39833776028822f3de6758b}
+
+\begin{DoxyCompactList}\small\item\em coef. de correlacao \end{DoxyCompactList}\item 
+\hypertarget{classCAjusteCurva_a193c50c4214e29b8ed43d6023d42e47a}{bool \hyperlink{classCAjusteCurva_a193c50c4214e29b8ed43d6023d42e47a}{efeito\-Estocagem}}\label{classCAjusteCurva_a193c50c4214e29b8ed43d6023d42e47a}
+
+\begin{DoxyCompactList}\small\item\em indica que o coef. de correlacao nao foi satisfatorio (ha estocagem) \end{DoxyCompactList}\item 
+\hypertarget{classCAjusteCurva_a98acb361b2bfb83752d043d0cd0e7e6e}{std\-::vector$<$ double $>$ \hyperlink{classCAjusteCurva_a98acb361b2bfb83752d043d0cd0e7e6e}{logt}}\label{classCAjusteCurva_a98acb361b2bfb83752d043d0cd0e7e6e}
+
+\begin{DoxyCompactList}\small\item\em ajuste de variavel para logaritmica \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe que executa a regressao linear e ajusta ate a correlacao satisfatoria. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-Ajuste\-Curva.\-h\item 
+C\-Ajuste\-Curva.\-cpp\end{DoxyCompactItemize}
