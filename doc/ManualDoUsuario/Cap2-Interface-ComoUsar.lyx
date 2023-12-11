@@ -1,0 +1,428 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\options normaltoc, sumarioincompleto
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_title "Título da Monografia - Dissertação - Tese"
+\pdf_author "Nome do Autor"
+\pdf_subject "Descrever assunto"
+\pdf_keywords "Copiar do resumo"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref page
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Interface Gráfica
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Interface gráfica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+A Interface Gráfica Geral
+\end_layout
+
+\begin_layout Standard
+A interface do programa é apresentada na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Imagem da Interface Gráfica"
+
+\end_inset
+
+ e mostra a janela principal do software com as informações para continuação
+ do programa.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+na imagem simulador desenvolvido pelo aluno Nicholas
+\end_layout
+
+\begin_layout Plain Layout
+note que capturamos a imagem da tela do software e adicionamos na figura
+ abaixo algumas informações de uso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/GitHub/ProjetoEngenharia__Andreia_2021/doc/ManualDoUsuario/imagens/dados entrada MDH.PNG
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Imagem da Interface Gráfica
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Imagem da Interface Gráfica"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Manual do Usuário
+\end_layout
+
+\begin_layout Standard
+O programa calcula a permeabilidade, o fator de película, a pressão inicial,
+ a eficiência de fluxo, o índice de produtividade, o coeficiente e o tempo
+ de estocagem do reservatório que foi submetido ao teste de pressão (de
+ curta ou longa duração).
+ Para o funcionamento correto do programa, deve-se seguir os seguintes passos:
+\end_layout
+
+\begin_layout Standard
+- Opcional: Para gerar o gráfico característico do reservatório: Ter instalado
+ o software livre 
+\begin_inset Quotes eld
+\end_inset
+
+Gnuplot
+\begin_inset Quotes erd
+\end_inset
+
+ no computador.
+ 
+\end_layout
+
+\begin_layout Standard
+- Os dados registrados no registrador de pressão do poço devem ser colocados
+ na pasta do programa, sob qualquer nome, em formato de texto.
+ 
+\end_layout
+
+\begin_layout Standard
+- Para abrir o programa no sistema operacional 
+\begin_inset Quotes eld
+\end_inset
+
+Windows
+\begin_inset Quotes erd
+\end_inset
+
+, simplesmente clique duas vezes em 
+\begin_inset Quotes eld
+\end_inset
+
+TestePressao.exe
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Caso o sistema operacional utilizado seja o 
+\begin_inset Quotes eld
+\end_inset
+
+Linux
+\begin_inset Quotes erd
+\end_inset
+
+, abra o terminal, selecione o caminho da pasta do programa.
+ Digite então: 
+\begin_inset Quotes eld
+\end_inset
+
+g++ *.cpp
+\begin_inset Quotes erd
+\end_inset
+
+ para compilar os arquivos do programa e em seguida 
+\begin_inset Quotes eld
+\end_inset
+
+./a.out
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+- Então o programa tem a interface própria para comunicação com o usuário.
+\end_layout
+
+\begin_layout Standard
+- Primeiramente, escolha se deseja rodar o programa ou sair: Digite 1 para
+ rodar ou 2 para sair e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Escolha por qual método você deseja calcular o teste de pressão: Digite
+ 1 para Método de Horner, 2 para Método MDH.
+\end_layout
+
+\begin_layout Standard
+- Escolha o sistema de unidades que o registrador de pressão trabalha: Digite
+ 1 para o sistema americano (oilfield), 2 para o brasileiro (petrobras)
+ ou 3 para o sistema internacional e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a porosidade do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a altura do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe o fator volume formação do fluido e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a compressibilidade total (rocha+fluido) e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a vazão de produção e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe o tempo de produção e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a pressão no poço e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe o raio do poço e tecle enter.
+\end_layout
+
+\begin_layout Standard
+- Informe a pressão na posição de 1 hora, para no caso da escolha do método
+ MDH.
+\end_layout
+
+\begin_layout Standard
+Nesse momento, o programa fará a regressão linear dos dados importados e
+ mostrará na tela a equação da reta no formato 
+\begin_inset Quotes eld
+\end_inset
+
+y = a * x + b
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ele identificará o período de estocagem do reservatório para não haver
+ erro de cálculo, pois a análise do teste de pressão deve ser feita do período
+ transiente.
+\end_layout
+
+\begin_layout Standard
+- Escolha se quer que o programa gere o gráfico com o Gnuplot: Digite 1
+ para sim ou 2 para não e tecle enter.
+\end_layout
+
+\begin_layout Standard
+Nesse momento o programa:
+\end_layout
+
+\begin_layout Standard
+- Mostrará na tela os parâmetros do reservatório, com as devidas unidades.
+\end_layout
+
+\begin_layout Standard
+- Requisitará ao usuário o nome do arquivo de saida .dat com os parâmetros
+ calculados.
+\end_layout
+
+\begin_layout Standard
+- Em seguida, mostrará na tela os detalhes do período de estocagem do poço,
+ se houver.
+\end_layout
+
+\begin_layout Standard
+- Exibirá em tela a interpretação desses resultados no âmbito da exploração
+ de petróleo.
+\end_layout
+
+\begin_layout Standard
+Tecle enter e o programa perguntará se o usuário deseja variar algum parâmetro:
+ Digite 1 para sim 2 para voltar ao ínicio do programa.
+\end_layout
+
+\begin_layout Standard
+Caso o usuário digite 1, deverá seguir as instruções:
+\end_layout
+
+\begin_layout Standard
+- Selecionar o parâmetro: | 1-Porosidade | 2-Fator Volume de Formação |
+ 3-Compressibilidade | 4-Viscosidade |.
+\end_layout
+
+\begin_layout Standard
+- Selecionar o intervalo de varíação, e o valor de cada variação.
+\end_layout
+
+\begin_layout Standard
+Nesse momento serão gerados resultados referentes a cada valor adotado pelo
+ parâmetro selecionado, mostrados em tela para comparação, e exportados
+ para um arquivo .dat.
+\end_layout
+
+\begin_layout Standard
+- Tecle enter e o programa fará a mesma pergunta do início: Digite 1 para
+ rodar o programa novamente ou 2 para sair, tecle enter.
+ 
+\end_layout
+
+\begin_layout Standard
+Observação: Se houver uma entrada negativa de valor (equivocada), o programa
+ pedirá para o usuário entrar com o dado novamente.
+\end_layout
+
+\begin_layout Standard
+Descreve-se aqui o manual do usuário, um guia que explica, passo a passo
+ a forma de instalação e uso do software desenvolvido.
+\end_layout
+
+\end_body
+\end_document

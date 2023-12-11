@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['getpelicula_0',['getPelicula',['../class_c_build_u_p.html#a32426e55a975f26d0e654cef277e0649',1,'CBuildUP']]],
+  ['getpermeabilidade_1',['getPermeabilidade',['../class_c_build_u_p.html#ac5b05d8b062c18c99fe781a92dd40559',1,'CBuildUP']]],
+  ['gnuplot_2',['gnuplot',['../class_gnuplot.html#a187eb517b362cf379492fe7f1621ee50',1,'Gnuplot::Gnuplot(const std::string &amp;style=&quot;points&quot;)'],['../class_gnuplot.html#a8ceac5808e42665c1dee305ae7ea9070',1,'Gnuplot::Gnuplot(const std::vector&lt; double &gt; &amp;x, const std::string &amp;title=&quot;&quot;, const std::string &amp;style=&quot;points&quot;, const std::string &amp;labelx=&quot;x&quot;, const std::string &amp;labely=&quot;y&quot;)'],['../class_gnuplot.html#a24327b6116c71acdc195eadf665c67cb',1,'Gnuplot::Gnuplot(const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;y, const std::string &amp;title=&quot;&quot;, const std::string &amp;style=&quot;points&quot;, const std::string &amp;labelx=&quot;x&quot;, const std::string &amp;labely=&quot;y&quot;)'],['../class_gnuplot.html#a14191e89154f2716608f6907975cc012',1,'Gnuplot::Gnuplot(const std::vector&lt; double &gt; &amp;x, const std::vector&lt; double &gt; &amp;y, const std::vector&lt; double &gt; &amp;z, const std::string &amp;title=&quot;&quot;, const std::string &amp;style=&quot;points&quot;, const std::string &amp;labelx=&quot;x&quot;, const std::string &amp;labely=&quot;y&quot;, const std::string &amp;labelz=&quot;z&quot;)']]],
+  ['gnuplotexception_3',['GnuplotException',['../class_gnuplot_exception.html#a8b324a9ef4d3f75079d41ecd61c62d44',1,'GnuplotException']]],
+  ['grid_4',['Grid',['../class_gnuplot.html#aba6c206ff95d6d7377627f8545ca62c1',1,'Gnuplot']]]
+];

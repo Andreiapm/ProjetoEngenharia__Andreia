@@ -1,0 +1,741 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master /home2/andreduartebueno/workdir/ModeloDocumento-ProjetoEngenharia-ProgramacaoPratica/doc/manualDesenvolvedor-lyx/DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Documentação para o Desenvolvedor
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Documentação} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A presente documentação refere-se ao uso do "Programa em C++ para avaliação
+ de formações por dados de teste de pressão
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Esta documentação tem o formato de uma apostila que explica passo a passo
+ ao usuário como usar o programa.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+O programa calcula a permeabilidade, o fator de película, a pressão inicial,
+ a eficiência de fluxo, o índice de produtividade, o coeficiente e o tempo
+ de estocagem do reservatório que foi submetido ao teste de pressão (de
+ curta ou longa duração).
+ Para o funcionamento correto do programa, deve-se seguir os seguintes passos:
+\end_layout
+
+\begin_layout Plain Layout
+- Opcional: Para gerar o gráfico característico do reservatório: Ter instalado
+ o software livre 
+\begin_inset Quotes eld
+\end_inset
+
+Gnuplot
+\begin_inset Quotes erd
+\end_inset
+
+ no computador.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+- Os dados registrados no registrador de pressão do poço devem ser colocados
+ na pasta do programa, sob qualquer nome, em formato de texto.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+- Para abrir o programa no sistema operacional 
+\begin_inset Quotes eld
+\end_inset
+
+Windows
+\begin_inset Quotes erd
+\end_inset
+
+, simplesmente clique duas vezes em 
+\begin_inset Quotes eld
+\end_inset
+
+TestePressao.exe
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Caso o sistema operacional utilizado seja o 
+\begin_inset Quotes eld
+\end_inset
+
+Linux
+\begin_inset Quotes erd
+\end_inset
+
+, abra o terminal, selecione o caminho da pasta do programa.
+ Digite então: 
+\begin_inset Quotes eld
+\end_inset
+
+g++ *.cpp
+\begin_inset Quotes erd
+\end_inset
+
+ para compilar os arquivos do programa e em seguida 
+\begin_inset Quotes eld
+\end_inset
+
+./a.out
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+- Então o programa tem a interface própria para comunicação com o usuário.
+\end_layout
+
+\begin_layout Plain Layout
+- Primeiramente, escolha se deseja rodar o programa ou sair: Digite 1 para
+ rodar ou 2 para sair e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Escolha por qual método você deseja calcular o teste de pressão: Digite
+ 1 para Método de Horner, 2 para Método MDH.
+\end_layout
+
+\begin_layout Plain Layout
+- Escolha o sistema de unidades que o registrador de pressão trabalha: Digite
+ 1 para o sistema americano (oilfield), 2 para o brasileiro (petrobras)
+ ou 3 para o sistema internacional e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe a porosidade do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe a altura do reservatório e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe o fator volume formação do fluido e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe a compressibilidade total (rocha+fluido) e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe a vazão de produção e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe o tempo de produção e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe a pressão no poço e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe o raio do poço e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+- Informe a pressão na posição de 1 hora, para no caso da escolha do método
+ MDH.
+\end_layout
+
+\begin_layout Plain Layout
+Nesse momento, o programa fará a regressão linear dos dados importados e
+ mostrará na tela a equação da reta no formato 
+\begin_inset Quotes eld
+\end_inset
+
+y = a * x + b
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Ele identificará o período de estocagem do reservatório para não haver
+ erro de cálculo, pois a análise do teste de pressão deve ser feita do período
+ transiente.
+\end_layout
+
+\begin_layout Plain Layout
+- Escolha se quer que o programa gere o gráfico com o Gnuplot: Digite 1
+ para sim ou 2 para não e tecle enter.
+\end_layout
+
+\begin_layout Plain Layout
+Nesse momento o programa:
+\end_layout
+
+\begin_layout Plain Layout
+- Mostrará na tela os parâmetros do reservatório, com as devidas unidades.
+\end_layout
+
+\begin_layout Plain Layout
+- Requisitará ao usuário o nome do arquivo de saida .dat com os parâmetros
+ calculados.
+\end_layout
+
+\begin_layout Plain Layout
+- Em seguida, mostrará na tela os detalhes do período de estocagem do poço,
+ se houver.
+\end_layout
+
+\begin_layout Plain Layout
+- Exibirá em tela a interpretação desses resultados no âmbito da exploração
+ de petróleo.
+\end_layout
+
+\begin_layout Plain Layout
+Tecle enter e o programa perguntará se o usuário deseja variar algum parâmetro:
+ Digite 1 para sim 2 para voltar ao ínicio do programa.
+\end_layout
+
+\begin_layout Plain Layout
+Caso o usuário digite 1, deverá seguir as instruções:
+\end_layout
+
+\begin_layout Plain Layout
+- Selecionar o parâmetro: | 1-Porosidade | 2-Fator Volume de Formação |
+ 3-Compressibilidade | 4-Viscosidade |.
+\end_layout
+
+\begin_layout Plain Layout
+- Selecionar o intervalo de varíação, e o valor de cada variação.
+\end_layout
+
+\begin_layout Plain Layout
+Nesse momento serão gerados resultados referentes a cada valor adotado pelo
+ parâmetro selecionado, mostrados em tela para comparação, e exportados
+ para um arquivo .dat.
+\end_layout
+
+\begin_layout Plain Layout
+- Tecle enter e o programa fará a mesma pergunta do início: Digite 1 para
+ rodar o programa novamente ou 2 para sair, tecle enter.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Observação: Se houver uma entrada negativa de valor (equivocada), o programa
+ pedirá para o usuário entrar com o dado novamente.
+\end_layout
+
+\begin_layout Plain Layout
+Descreve-se aqui o manual do usuário, um guia que explica, passo a passo
+ a forma de instalação e uso do software desenvolvido.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Documentação para desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Apresenta-se nesta seção a documentação para desenvolvedor, contendo assim
+ as informações para usuários que queiram modificar ou ampliar este software.
+\end_layout
+
+\begin_layout Subsection
+Dependências
+\end_layout
+
+\begin_layout Standard
+Para compilar o software é necessário atender as seguintes dependências:
+\end_layout
+
+\begin_layout Itemize
+Instalar o compilador g++ da GNU disponível em 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://gcc.gnu.org"
+target "http://gcc.gnu.org"
+literal "false"
+
+\end_inset
+
+.
+ Para instalar no GNU/Linux use o comando 
+\family typewriter
+yum install gcc
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Biblioteca CGnuplot; os arquivos para acesso a CGnuplot devem estar no diretório
+ com os códigos do software;
+\end_layout
+
+\begin_layout Itemize
+O software 
+\family typewriter
+gnuplot
+\family default
+, disponível no endereço 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.gnuplot.info/"
+literal "false"
+
+\end_inset
+
+, deve estar instalado.
+ É possível que haja necessidade de setar o caminho para execução do 
+\family typewriter
+gnuplot
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Documentação usando doxygen
+\end_layout
+
+\begin_layout Standard
+A documentação do código do software deve ser feita usando o padrão JAVADOC,
+ conforme apresentada no Capítulo - Documentação, do livro texto da disciplina.
+ Depois de documentar o código, use o software 
+\family typewriter
+doxygen 
+\family default
+para gerar a documentação do desenvolvedor no formato html.
+ O software 
+\family typewriter
+doxygen
+\family default
+ lê os arquivos com os códigos (*.h e *.cpp) e gera uma documentação muito
+ útil e de fácil navegação no formato html.
+ 
+\end_layout
+
+\begin_layout Section
+Sugestões para trabalhos futuros
+\end_layout
+
+\begin_layout Itemize
+O desenvolvedor pode acrescentar outro método de teste de pressão para avaliação
+ de formações ao programa.
+ Pela classe enumeração Método ele já consegue incluir na sequência para
+ os métodos de Horner e MDH que já existem no programa.
+\end_layout
+
+\begin_layout Itemize
+Otimizar o código.
+\end_layout
+
+\begin_layout Itemize
+Realizar comparação com os valores encontrados para cada método.
+\end_layout
+
+\begin_layout Section
+Como gerar a documentação usando doxygen
+\end_layout
+
+\begin_layout Standard
+A documentação do código do software deve ser feita usando o padrão JAVADOC,
+ conforme apresentada no Capítulo - Documentação, do livro texto da disciplina.
+ Depois de documentar o código, use o software 
+\family typewriter
+doxygen 
+\family default
+para gerar a documentação do desenvolvedor no formato html.
+ O software 
+\family typewriter
+doxygen
+\family default
+ lê os arquivos com os códigos (*.h e *.cpp) e gera uma documentação muito
+ útil e de fácil navegação no formato html.
+ 
+\end_layout
+
+\begin_layout Itemize
+Veja informações sobre uso do formato JAVADOC em:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Veja informações sobre o software 
+\family typewriter
+doxygen
+\family default
+ em
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.stack.nl/~dimitri/doxygen/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Passos para gerar a documentação usando o 
+\family typewriter
+doxygen
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Documente o código usando o formato JAVADOC.
+ Um bom exemplo de código documentado é apresentado nos arquivos da biblioteca
+ CGnuplot, abra os arquivos 
+\family typewriter
+CGnuplot.h
+\family default
+ e 
+\family typewriter
+CGnuplot.cpp
+\family default
+ no editor de texto e veja como o código foi documentado.
+\end_layout
+
+\begin_layout Itemize
+Abra um terminal.
+\end_layout
+
+\begin_layout Itemize
+Vá para o diretório onde esta o código.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+cd /caminho/para/seu/codigo
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Peça para o 
+\family typewriter
+doxygen
+\family default
+ gerar o arquivo de definições (arquivo que diz para o doxygem como deve
+ ser a documentação).
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+O software doxywizard é uma interface gráfica que permite a configuração
+ do arquivo de definições (gerado pelo comando doxygen -g).
+ 
+\end_layout
+
+\begin_layout Plain Layout
+No GNU/Linux o doxywizard pode ser instaldo com o comando yum install doxygen-do
+xywizard.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+dogygen -g
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Peça para o 
+\family typewriter
+doxygen
+\family default
+ gerar a documentação.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+doxygen
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Verifique a documentação gerada abrindo o arquivo html/index.html.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+firefox html/index.html
+\end_layout
+
+\begin_layout Standard
+ou
+\end_layout
+
+\begin_layout LyX-Code
+chrome html/index.html
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lista-de-classes-doxygen"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ apresenta a listagem de classes gerado pelo 
+\family typewriter
+doxygen
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagens/doxygen projeto andreia.PNG
+	scale 40
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lista de classes pelo doxygen.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Lista-de-classes-doxygen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Veja no Capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Teste"
+
+\end_inset
+
+ - Teste, exemplos de uso do software.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
