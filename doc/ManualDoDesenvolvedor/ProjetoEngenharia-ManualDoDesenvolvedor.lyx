@@ -451,7 +451,7 @@ rhead{}
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "bibliografia"
-options "apalike"
+options "bibtotoc,apalike"
 
 \end_inset
 
